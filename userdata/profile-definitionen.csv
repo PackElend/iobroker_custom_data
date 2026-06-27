@@ -1,0 +1,6 @@
+Profil;Zieltyp;Feld;Pflicht;Zielrolle;Datentyp;Unit;Min;Max;Lesbar;Schreibbar;Quell-Suffix;Lese-Konverter;Schreib-Konverter
+jalousie-zwave-multilevel;blind;SET;ja;level.blind;number;%;0;100;true;true;Multilevel_Switch.targetValue_1;Math.round(val/0.99);Math.round(val*0.99)
+jalousie-zwave-multilevel;blind;ACTUAL;nein;value.blind;number;%;0;100;true;false;Multilevel_Switch.currentValue_1;Math.round(val/0.99);
+jalousie-zwave-multilevel;blind;TILT_SET;nein;level.tilt;number;%;0;100;true;true;Multilevel_Switch.targetValue_2;Math.round(val/0.99);Math.round(val*0.99)
+jalousie-zwave-multilevel;blind;TILT_ACTUAL;nein;value.tilt;number;%;0;100;true;false;Multilevel_Switch.currentValue_2;Math.round(val/0.99);
+fenster-zwave-doorstate-tilt;windowTilt;ACTUAL;ja;value.window;number;;0;2;true;false;Notification.Access_Control.Door_state;val === 23 ? 0 : (val === 5633 ? 2 : 1);

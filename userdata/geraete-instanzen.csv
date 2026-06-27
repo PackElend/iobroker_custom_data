@@ -1,0 +1,4 @@
+AliasName;Profil;BasisPfad;Raum;Funktion
+ShellyWaveShutter;jalousie-zwave-multilevel;zwavews.0.nodeID_006;Arbeitszimmer;Jalousie
+#NaechsteJalousie;jalousie-zwave-multilevel;zwavews.0.nodeID_0XX;Buero;Jalousie
+FensterArbeitszimmer;fenster-zwave-doorstate-tilt;zwavews.0.nodeID_009;Arbeitszimmer;Fenster
