@@ -1,0 +1,4 @@
+[
+  { "node": "zwavews.0.nodeID_006", "alias": "ShellyWaveShutter",    "vorlage": "jalousie" },
+  { "node": "zwavews.0.nodeID_009", "alias": "FensterArbeitszimmer", "vorlage": "fenster" }
+]
