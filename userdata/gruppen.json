@@ -1,0 +1,38 @@
+[
+  {
+    "gruppe": "Jalousien_alle",
+    "name": "Alle Jalousien",
+    "variante": "A",
+    "raum": "Zentrale",
+    "funktion": "Jalousie",
+    "wertZu": 100,
+    "wertAuf": 0,
+    "mitglieder": [
+      "alias.0.ShellyWaveShutter.SET"
+    ]
+  },
+  {
+    "gruppe": "Jalousien_sued",
+    "name": "Jalousien Suedseite",
+    "variante": "B",
+    "raum": "Zentrale",
+    "funktion": "Jalousie",
+    "wertZu": null,
+    "wertAuf": null,
+    "mitglieder": [
+      "alias.0.ShellyWaveShutter.SET"
+    ]
+  },
+  {
+    "gruppe": "Jalousien_eg",
+    "name": "Jalousien Erdgeschoss",
+    "variante": "C",
+    "raum": "Zentrale",
+    "funktion": "Jalousie",
+    "wertZu": null,
+    "wertAuf": null,
+    "mitglieder": [
+      "alias.0.ShellyWaveShutter.SET"
+    ]
+  }
+]
