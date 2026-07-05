@@ -1,4 +1,7 @@
-[
-  { "node": "zwavews.0.nodeID_006", "alias": "ShellyWaveShutter",    "vorlage": "jalousie" },
-  { "node": "zwavews.0.nodeID_009", "alias": "FensterArbeitszimmer", "vorlage": "fenster" }
-]
+{
+  "modus": "dummy",
+  "geraete": [
+    { "alias": "ShellyWaveShutter",    "vorlage": "jalousie", "zielEcht": "zwavews.0.nodeID_006", "zielDummy": "0_userdata.0.dummy.ShellyWaveShutter" },
+    { "alias": "FensterArbeitszimmer", "vorlage": "fenster",  "zielEcht": "zwavews.0.nodeID_009", "zielDummy": "0_userdata.0.dummy.FensterArbeitszimmer" }
+  ]
+}

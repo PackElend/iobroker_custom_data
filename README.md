@@ -7,9 +7,9 @@ Gruppen-Verwaltung in ioBroker (Docker/buanet, Z-Wave über zwavejs-Fork
 | Datei | Zweck |
 |---|---|
 | [userdata/vorlagen.json](userdata/vorlagen.json) | Alias-Templates (Rollen, Datenpunkt-Rollen, Einheiten) |
-| [userdata/mapping.json](userdata/mapping.json) | Zuordnung Z-Wave-Node → Vorlage |
+| [userdata/mapping.json](userdata/mapping.json) | Zuordnung Gerät → Vorlage inkl. globalem `modus` (`dummy`/`echt`) und Zielen `zielEcht`/`zielDummy` |
 | [userdata/gruppen.json](userdata/gruppen.json) | Gruppen-Definitionen für die gemeinsame Steuerung |
-| [js-scripts/alias-aufbau.js](js-scripts/alias-aufbau.js) | Baut Geräte-Aliase aus vorlagen+mapping (delete-and-rebuild) |
+| [js-scripts/alias-aufbau.js](js-scripts/alias-aufbau.js) | Baut Geräte-Aliase aus vorlagen+mapping (Upsert, Dummy-/Echt-Modus — siehe [Doku](docs/alias-dummy-modus.md)) |
 | [js-scripts/gruppen-aufbau.js](js-scripts/gruppen-aufbau.js) | Baut Gruppen-Objekte aus gruppen.json (delete-and-rebuild) |
 
 Die JSON-Dateien werden in den ioBroker-Dateispeicher unter
