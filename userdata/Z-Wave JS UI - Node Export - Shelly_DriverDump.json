@@ -1,0 +1,2837 @@
+{
+  "id": 3,
+  "manufacturer": "Shelly Europe Ltd.",
+  "label": "QLSH-001P10EU",
+  "description": "Shelly Wave Shutter",
+  "fingerprint": {
+    "manufacturerId": "0x0460",
+    "productType": "0x0003",
+    "productId": "0x0083",
+    "firmwareVersion": "14.2.0",
+    "hardwareVersion": 1
+  },
+  "interviewStage": "Complete",
+  "ready": true,
+  "securityClasses": {
+    "S2_AccessControl": false,
+    "S2_Authenticated": true,
+    "S2_Unauthenticated": true,
+    "S0_Legacy": false
+  },
+  "failedS2Bootstrapping": false,
+  "isListening": true,
+  "isFrequentListening": false,
+  "isRouting": true,
+  "supportsBeaming": true,
+  "supportsSecurity": false,
+  "protocol": "ZWave",
+  "protocolVersion": "4.5x / 6.0x",
+  "sdkVersion": "7.23.4",
+  "supportedDataRates": [
+    40000,
+    100000
+  ],
+  "deviceClass": {
+    "basic": {
+      "key": 4,
+      "label": "Routing End Node"
+    },
+    "generic": {
+      "key": 17,
+      "label": "Multilevel Switch"
+    },
+    "specific": {
+      "key": 6,
+      "label": "Motor Control Class B"
+    }
+  },
+  "commandClasses": {
+    "Z-Wave Plus Info": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 2,
+      "values": [
+        {
+          "property": "userIcon",
+          "value": 6144,
+          "timestamp": "2026-05-03T14:21:03.967Z",
+          "internal": true
+        },
+        {
+          "property": "installerIcon",
+          "value": 6144,
+          "timestamp": "2026-05-03T14:21:03.968Z",
+          "internal": true
+        },
+        {
+          "property": "roleType",
+          "value": 5,
+          "timestamp": "2026-05-03T14:22:02.833Z",
+          "internal": true
+        },
+        {
+          "property": "nodeType",
+          "value": 0,
+          "timestamp": "2026-05-03T14:22:02.834Z",
+          "internal": true
+        },
+        {
+          "property": "zwavePlusVersion",
+          "value": 2,
+          "timestamp": "2026-05-03T14:22:02.835Z",
+          "internal": true
+        }
+      ]
+    },
+    "Security": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 1,
+      "values": []
+    },
+    "Security 2": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 1,
+      "values": []
+    },
+    "Transport Service": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 2,
+      "values": []
+    },
+    "Supervision": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 1,
+      "values": []
+    },
+    "Meter": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 6,
+      "values": []
+    },
+    "Notification": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 8,
+      "values": [
+        {
+          "property": "supportedNotificationTypes",
+          "value": [
+            4,
+            8
+          ],
+          "timestamp": "2026-05-03T14:22:35.215Z",
+          "internal": true
+        },
+        {
+          "property": "supportsV1Alarm",
+          "value": false,
+          "timestamp": "2026-05-03T14:22:35.216Z",
+          "internal": true
+        },
+        {
+          "property": "supportedNotificationEvents",
+          "propertyKey": 8,
+          "value": [
+            2,
+            6,
+            7,
+            8
+          ],
+          "timestamp": "2026-05-03T14:22:36.569Z",
+          "internal": true
+        },
+        {
+          "property": "notificationMode",
+          "value": "push",
+          "timestamp": "2026-05-03T14:21:58.037Z",
+          "internal": true
+        },
+        {
+          "property": "supportedNotificationEvents",
+          "propertyKey": 4,
+          "value": [],
+          "timestamp": "2026-05-03T14:22:35.884Z",
+          "internal": true
+        }
+      ]
+    },
+    "Association": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 2,
+      "values": [
+        {
+          "property": "groupCount",
+          "value": 5,
+          "timestamp": "2026-05-03T14:21:09.449Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 1,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:10.567Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 1,
+          "value": 9,
+          "timestamp": "2026-05-03T14:21:10.568Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 2,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:11.256Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 2,
+          "value": 9,
+          "timestamp": "2026-05-03T14:21:11.257Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 3,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:11.993Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 3,
+          "value": 9,
+          "timestamp": "2026-05-03T14:21:11.994Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 4,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:13.224Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 4,
+          "value": 9,
+          "timestamp": "2026-05-03T14:21:13.225Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 5,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:13.938Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 5,
+          "value": 9,
+          "timestamp": "2026-05-03T14:21:13.939Z",
+          "internal": true
+        },
+        {
+          "property": "hasLifeline",
+          "value": true,
+          "timestamp": "2026-05-03T14:21:18.709Z",
+          "internal": true
+        }
+      ]
+    },
+    "Association Group Information": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 3,
+      "values": [
+        {
+          "property": "name",
+          "propertyKey": 1,
+          "value": "Lifeline",
+          "timestamp": "2026-05-03T14:21:19.407Z",
+          "internal": true
+        },
+        {
+          "property": "issuedCommands",
+          "propertyKey": 1,
+          "value": {
+            "38": [
+              3
+            ],
+            "50": [
+              2
+            ],
+            "90": [
+              1
+            ],
+            "91": [
+              3,
+              6
+            ],
+            "106": [
+              4
+            ],
+            "113": [
+              5
+            ],
+            "135": [
+              3
+            ],
+            "$$type$$": "map"
+          },
+          "timestamp": "2026-05-03T14:21:20.524Z",
+          "internal": true
+        },
+        {
+          "property": "name",
+          "propertyKey": 2,
+          "value": "Start/stop quick press [SW1]",
+          "timestamp": "2026-05-03T14:21:21.842Z",
+          "internal": true
+        },
+        {
+          "property": "issuedCommands",
+          "propertyKey": 2,
+          "value": {
+            "32": [
+              1
+            ],
+            "$$type$$": "map"
+          },
+          "timestamp": "2026-05-03T14:21:22.533Z",
+          "internal": true
+        },
+        {
+          "property": "name",
+          "propertyKey": 3,
+          "value": "Long press press [SW1]",
+          "timestamp": "2026-05-03T14:21:23.652Z",
+          "internal": true
+        },
+        {
+          "property": "issuedCommands",
+          "propertyKey": 3,
+          "value": {
+            "38": [
+              4,
+              5
+            ],
+            "$$type$$": "map"
+          },
+          "timestamp": "2026-05-03T14:21:24.711Z",
+          "internal": true
+        },
+        {
+          "property": "name",
+          "propertyKey": 4,
+          "value": "Start/stop quick press [SW2]",
+          "timestamp": "2026-05-03T14:21:25.905Z",
+          "internal": true
+        },
+        {
+          "property": "issuedCommands",
+          "propertyKey": 4,
+          "value": {
+            "32": [
+              1
+            ],
+            "$$type$$": "map"
+          },
+          "timestamp": "2026-05-03T14:21:26.589Z",
+          "internal": true
+        },
+        {
+          "property": "name",
+          "propertyKey": 5,
+          "value": "Long press press [SW2]",
+          "timestamp": "2026-05-03T14:21:27.298Z",
+          "internal": true
+        },
+        {
+          "property": "issuedCommands",
+          "propertyKey": 5,
+          "value": {
+            "38": [
+              4,
+              5
+            ],
+            "$$type$$": "map"
+          },
+          "timestamp": "2026-05-03T14:21:28.063Z",
+          "internal": true
+        },
+        {
+          "property": "hasDynamicInfo",
+          "value": false,
+          "timestamp": "2026-05-03T14:21:32.121Z",
+          "internal": true
+        },
+        {
+          "property": "info",
+          "propertyKey": 1,
+          "value": {
+            "mode": 0,
+            "profile": 1,
+            "eventCode": 0
+          },
+          "timestamp": "2026-05-03T14:21:29.269Z",
+          "internal": true
+        },
+        {
+          "property": "info",
+          "propertyKey": 2,
+          "value": {
+            "mode": 0,
+            "profile": 8193,
+            "eventCode": 0
+          },
+          "timestamp": "2026-05-03T14:21:29.957Z",
+          "internal": true
+        },
+        {
+          "property": "info",
+          "propertyKey": 3,
+          "value": {
+            "mode": 0,
+            "profile": 8193,
+            "eventCode": 0
+          },
+          "timestamp": "2026-05-03T14:21:30.669Z",
+          "internal": true
+        },
+        {
+          "property": "info",
+          "propertyKey": 4,
+          "value": {
+            "mode": 0,
+            "profile": 8194,
+            "eventCode": 0
+          },
+          "timestamp": "2026-05-03T14:21:31.358Z",
+          "internal": true
+        },
+        {
+          "property": "info",
+          "propertyKey": 5,
+          "value": {
+            "mode": 0,
+            "profile": 8194,
+            "eventCode": 0
+          },
+          "timestamp": "2026-05-03T14:21:32.123Z",
+          "internal": true
+        }
+      ]
+    },
+    "Multi Channel Association": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 3,
+      "values": [
+        {
+          "property": "groupCount",
+          "value": 5,
+          "timestamp": "2026-05-03T14:21:14.364Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 1,
+          "value": [
+            {
+              "nodeId": 1,
+              "endpoint": 0
+            }
+          ],
+          "timestamp": "2026-05-03T14:21:15.341Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 1,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:15.346Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 1,
+          "value": 9,
+          "timestamp": "2026-05-03T14:21:15.348Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 2,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:16.005Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 2,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:16.006Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 2,
+          "value": 9,
+          "timestamp": "2026-05-03T14:21:16.007Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 3,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:16.815Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 3,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:16.816Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 3,
+          "value": 9,
+          "timestamp": "2026-05-03T14:21:16.817Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 4,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:17.568Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 4,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:17.568Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 4,
+          "value": 9,
+          "timestamp": "2026-05-03T14:21:17.569Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 5,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:18.698Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 5,
+          "value": [],
+          "timestamp": "2026-05-03T14:21:18.699Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 5,
+          "value": 9,
+          "timestamp": "2026-05-03T14:21:18.699Z",
+          "internal": true
+        }
+      ]
+    },
+    "Central Scene": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 3,
+      "values": [
+        {
+          "property": "supportedKeyAttributes",
+          "value": {
+            "1": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "2": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "$$type$$": "map"
+          },
+          "timestamp": "2026-05-03T14:22:47.466Z",
+          "internal": true
+        },
+        {
+          "property": "supportsSlowRefresh",
+          "value": true,
+          "timestamp": "2026-05-03T14:22:47.467Z",
+          "internal": true
+        },
+        {
+          "property": "sceneCount",
+          "value": 2,
+          "timestamp": "2026-05-03T14:22:47.468Z",
+          "internal": true
+        },
+        {
+          "property": "scene",
+          "propertyKey": "001",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 255,
+            "label": "Scene 001",
+            "states": {
+              "0": "KeyPressed",
+              "1": "KeyReleased",
+              "2": "KeyHeldDown",
+              "3": "KeyPressed2x"
+            }
+          }
+        },
+        {
+          "property": "scene",
+          "propertyKey": "002",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 255,
+            "label": "Scene 002",
+            "states": {
+              "0": "KeyPressed",
+              "1": "KeyReleased",
+              "2": "KeyHeldDown",
+              "3": "KeyPressed2x"
+            }
+          }
+        },
+        {
+          "property": "slowRefresh"
+        }
+      ]
+    },
+    "Device Reset Locally": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 1,
+      "values": []
+    },
+    "Firmware Update Meta Data": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 5,
+      "values": [
+        {
+          "property": "additionalFirmwareIDs",
+          "value": [
+            1
+          ],
+          "timestamp": "2026-05-03T14:21:04.708Z",
+          "internal": true
+        },
+        {
+          "property": "firmwareUpgradable",
+          "value": true,
+          "timestamp": "2026-05-03T14:21:04.709Z",
+          "internal": true
+        },
+        {
+          "property": "supportsActivation",
+          "internal": true
+        },
+        {
+          "property": "continuesToFunction",
+          "internal": true
+        },
+        {
+          "property": "supportsResuming",
+          "internal": true
+        },
+        {
+          "property": "supportsNonSecureTransfer",
+          "internal": true
+        }
+      ]
+    },
+    "Indicator": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 3,
+      "values": [
+        {
+          "property": "supportedPropertyIDs",
+          "propertyKey": 80,
+          "value": [
+            3,
+            4,
+            5
+          ],
+          "timestamp": "2026-05-03T14:21:05.439Z",
+          "internal": true
+        },
+        {
+          "property": "supportedIndicatorIds",
+          "value": [
+            80
+          ],
+          "timestamp": "2026-05-03T14:21:05.443Z",
+          "internal": true
+        },
+        {
+          "property": "value"
+        },
+        {
+          "property": "identify"
+        }
+      ]
+    },
+    "Multi Channel": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 4,
+      "values": [
+        {
+          "property": "aggregatedCount",
+          "value": 0,
+          "timestamp": "2026-05-03T14:21:07.277Z",
+          "internal": true
+        },
+        {
+          "property": "individualCount",
+          "value": 2,
+          "timestamp": "2026-05-03T14:21:07.279Z",
+          "internal": true
+        },
+        {
+          "property": "identicalCapabilities",
+          "value": true,
+          "timestamp": "2026-05-03T14:21:07.281Z",
+          "internal": true
+        },
+        {
+          "property": "countIsDynamic",
+          "value": false,
+          "timestamp": "2026-05-03T14:21:07.282Z",
+          "internal": true
+        },
+        {
+          "property": "endpointIndizes",
+          "value": [
+            1,
+            2
+          ],
+          "timestamp": "2026-05-03T14:21:08.724Z",
+          "internal": true
+        },
+        {
+          "property": "commandClasses",
+          "internal": true
+        },
+        {
+          "property": "deviceClass",
+          "internal": true
+        }
+      ]
+    },
+    "Powerlevel": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 1,
+      "values": []
+    },
+    "Version": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 3,
+      "values": [
+        {
+          "property": "hardwareVersion",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave chip hardware version"
+          },
+          "value": 1,
+          "timestamp": "2026-05-03T14:20:38.207Z"
+        },
+        {
+          "property": "firmwareVersions",
+          "metadata": {
+            "type": "string[]",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave chip firmware versions"
+          },
+          "value": [
+            "14.2",
+            "3.0"
+          ],
+          "timestamp": "2026-05-03T14:20:38.213Z"
+        },
+        {
+          "property": "protocolVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave protocol version"
+          },
+          "value": "7.23",
+          "timestamp": "2026-05-03T14:20:38.220Z"
+        },
+        {
+          "property": "libraryType",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "label": "Library type",
+            "states": {
+              "0": "Unknown",
+              "1": "Static Controller",
+              "2": "Controller",
+              "3": "Enhanced Slave",
+              "4": "Slave",
+              "5": "Installer",
+              "6": "Routing Slave",
+              "7": "Bridge Controller",
+              "8": "Device under Test",
+              "9": "N/A",
+              "10": "AV Remote",
+              "11": "AV Device"
+            }
+          },
+          "value": 3,
+          "timestamp": "2026-05-03T14:20:38.228Z"
+        },
+        {
+          "property": "supportsZWaveSoftwareGet",
+          "value": true,
+          "timestamp": "2026-05-03T14:21:01.788Z",
+          "internal": true
+        },
+        {
+          "property": "applicationBuildNumber",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Application build number"
+          },
+          "value": 43981,
+          "timestamp": "2026-05-03T14:21:03.118Z"
+        },
+        {
+          "property": "applicationVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Application version"
+          },
+          "value": "14.2.0",
+          "timestamp": "2026-05-03T14:21:03.120Z"
+        },
+        {
+          "property": "zWaveProtocolBuildNumber",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave protocol build number"
+          },
+          "value": 562,
+          "timestamp": "2026-05-03T14:21:03.123Z"
+        },
+        {
+          "property": "zWaveProtocolVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave protocol version"
+          },
+          "value": "7.23.4",
+          "timestamp": "2026-05-03T14:21:03.127Z"
+        },
+        {
+          "property": "hostInterfaceBuildNumber",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Serial API build number"
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:21:03.129Z"
+        },
+        {
+          "property": "hostInterfaceVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Serial API version"
+          },
+          "value": "unused",
+          "timestamp": "2026-05-03T14:21:03.132Z"
+        },
+        {
+          "property": "applicationFrameworkBuildNumber",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave application framework API build number"
+          },
+          "value": 43981,
+          "timestamp": "2026-05-03T14:21:03.135Z"
+        },
+        {
+          "property": "applicationFrameworkAPIVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave application framework API version"
+          },
+          "value": "10.23.4",
+          "timestamp": "2026-05-03T14:21:03.139Z"
+        },
+        {
+          "property": "sdkVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "SDK version"
+          },
+          "value": "7.23.4",
+          "timestamp": "2026-05-03T14:21:03.143Z"
+        }
+      ]
+    },
+    "Configuration": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 4,
+      "values": [
+        {
+          "property": "isParamInformationFromConfig",
+          "value": true,
+          "timestamp": "2026-05-03T14:22:48.651Z",
+          "internal": true
+        },
+        {
+          "property": 5,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 2,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2
+              }
+            ],
+            "default": 2,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Momentary switch",
+              "1": "Toggle switch (Follow switch)",
+              "2": "Toggle switch (Change on toggle)"
+            },
+            "label": "SW1 & SW2 Switch Type",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:21.043Z"
+        },
+        {
+          "property": 6,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 1,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 1
+              }
+            ],
+            "default": 0,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Normal (SW1 - O1, SW2 - O2)",
+              "1": "Swapped (SW1 - O2, SW2 - O1)"
+            },
+            "label": "Swap Inputs",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:21.716Z"
+        },
+        {
+          "property": 16,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 1,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 1
+              }
+            ],
+            "default": 0,
+            "format": 1,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Normal",
+              "1": "Swapped"
+            },
+            "label": "Swap Outputs",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:24.666Z"
+        },
+        {
+          "property": 36,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 100,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 100
+              }
+            ],
+            "default": 50,
+            "unit": "%",
+            "format": 0,
+            "allowManualEntry": true,
+            "states": {
+              "0": "Disable"
+            },
+            "label": "O1: Power Change Report Threshold",
+            "isFromConfig": true,
+            "purpose": "reporting_threshold.power"
+          },
+          "value": 50,
+          "timestamp": "2026-05-03T14:23:26.229Z"
+        },
+        {
+          "property": 39,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 120,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 120
+              }
+            ],
+            "default": 30,
+            "unit": "seconds",
+            "format": 0,
+            "allowManualEntry": true,
+            "states": {
+              "0": "Disable"
+            },
+            "label": "O1: Minimum Time Between Power Reports",
+            "isFromConfig": true
+          },
+          "value": 30,
+          "timestamp": "2026-05-03T14:23:26.946Z"
+        },
+        {
+          "property": 71,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 2,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2
+              }
+            ],
+            "default": 0,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Shutter",
+              "1": "Venetian blind",
+              "2": "Set Manual time"
+            },
+            "label": "Operating Modes",
+            "isFromConfig": true
+          },
+          "value": 1,
+          "timestamp": "2026-05-03T14:23:27.667Z"
+        },
+        {
+          "property": 72,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 2,
+            "min": 0,
+            "max": 65535,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 65535
+              }
+            ],
+            "default": 0,
+            "unit": "seconds",
+            "format": 1,
+            "allowManualEntry": true,
+            "label": "Slats Turning Time",
+            "isFromConfig": true
+          },
+          "value": 125,
+          "timestamp": "2026-05-03T14:23:28.381Z"
+        },
+        {
+          "property": 73,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 1,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 1
+              }
+            ],
+            "default": 1,
+            "format": 1,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Disable",
+              "1": "Enable"
+            },
+            "label": "Slats to Previous Position",
+            "isFromConfig": true
+          },
+          "value": 1,
+          "timestamp": "2026-05-03T14:23:29.090Z"
+        },
+        {
+          "property": 76,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 255,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 255
+              }
+            ],
+            "default": 1,
+            "format": 1,
+            "allowManualEntry": true,
+            "states": {
+              "0": "Disable",
+              "1": "Auto calibration"
+            },
+            "label": "Motor Limit Detection",
+            "description": "Power threshold used to detect a limit switch. Increase this value if the device falsely detects limit switches.",
+            "isFromConfig": true
+          },
+          "value": 1,
+          "timestamp": "2026-05-03T14:23:29.817Z"
+        },
+        {
+          "property": 77,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 1,
+            "max": 255,
+            "allowed": [
+              {
+                "from": 1,
+                "to": 255
+              }
+            ],
+            "default": 1,
+            "format": 1,
+            "allowManualEntry": true,
+            "label": "Delay Next Movement",
+            "isFromConfig": true
+          },
+          "value": 5,
+          "timestamp": "2026-05-03T14:23:30.548Z"
+        },
+        {
+          "property": 78,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 1,
+            "max": 4,
+            "allowed": [
+              {
+                "from": 1,
+                "to": 4
+              }
+            ],
+            "default": 1,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "1": "Start Calibration",
+              "2": "Device Calibrated (read only)",
+              "3": "Device not Calibrated (read only)",
+              "4": "Calibration error (read only)"
+            },
+            "label": "Calibrate Device",
+            "isFromConfig": true
+          },
+          "value": 3,
+          "timestamp": "2026-05-03T14:23:31.282Z"
+        },
+        {
+          "property": 79,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 50,
+            "allowed": [
+              {
+                "value": 0
+              },
+              {
+                "from": 3,
+                "to": 50
+              }
+            ],
+            "default": 3,
+            "unit": "0.1 seconds",
+            "format": 0,
+            "allowManualEntry": true,
+            "states": {
+              "0": "Automatic time"
+            },
+            "label": "Limit Detection Delay Time",
+            "description": "Defines the delay before motor power is read after a relay switches ON.",
+            "isFromConfig": true
+          },
+          "value": 30,
+          "timestamp": "2026-05-03T14:23:32.465Z"
+        },
+        {
+          "property": 80,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 127,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 127
+              }
+            ],
+            "default": 10,
+            "unit": "seconds",
+            "format": 1,
+            "allowManualEntry": true,
+            "label": "Stop Delay Time After Limit Detected",
+            "isFromConfig": true
+          },
+          "value": 10,
+          "timestamp": "2026-05-03T14:23:33.173Z"
+        },
+        {
+          "property": 81,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 2,
+            "min": 1,
+            "max": 65000,
+            "allowed": [
+              {
+                "from": 1,
+                "to": 32000
+              },
+              {
+                "value": 65000
+              }
+            ],
+            "default": 120,
+            "unit": "seconds",
+            "format": 1,
+            "allowManualEntry": true,
+            "states": {
+              "65000": "unlimited time"
+            },
+            "label": "Shutter Max Moving Time",
+            "description": "Defines the maximum time the motor can move before stopping.",
+            "isFromConfig": true
+          },
+          "value": 120,
+          "timestamp": "2026-05-03T14:23:33.894Z"
+        },
+        {
+          "property": 105,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 100,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 100
+              }
+            ],
+            "default": 100,
+            "unit": "%",
+            "format": 0,
+            "allowManualEntry": true,
+            "label": "Signal LED Intensity",
+            "isFromConfig": true
+          },
+          "value": 100,
+          "timestamp": "2026-05-03T14:23:34.602Z"
+        },
+        {
+          "property": 117,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 1,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 1
+              }
+            ],
+            "default": 0,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Idle",
+              "1": "Reboot device"
+            },
+            "label": "Remote Reboot",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:35.306Z"
+        },
+        {
+          "property": 120,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 1,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 1
+              }
+            ],
+            "default": 0,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Idle",
+              "1": "Factory reset"
+            },
+            "label": "Factory Reset",
+            "description": "Reset to factory default settings and remove from the Z-Wave network.",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:36.025Z"
+        },
+        {
+          "property": 201,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "valueSize": 4,
+            "min": 0,
+            "max": 2147483647,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2147483647
+              }
+            ],
+            "format": 0,
+            "allowManualEntry": false,
+            "label": "Serial Number: Part 1",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:36.757Z"
+        },
+        {
+          "property": 202,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "valueSize": 4,
+            "min": 0,
+            "max": 2147483647,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2147483647
+              }
+            ],
+            "format": 0,
+            "allowManualEntry": false,
+            "label": "Serial Number: Part 2",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:37.480Z"
+        },
+        {
+          "property": 203,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "valueSize": 4,
+            "min": 0,
+            "max": 2147483647,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2147483647
+              }
+            ],
+            "format": 0,
+            "allowManualEntry": false,
+            "label": "Serial Number: Part 3",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:38.196Z"
+        },
+        {
+          "property": 7,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "format": 1,
+            "valueSize": 1,
+            "requiresReInclusion": false,
+            "allowManualEntry": true,
+            "isAdvanced": false,
+            "noBulkSupport": false,
+            "isFromConfig": false,
+            "min": 0,
+            "max": 1,
+            "default": 0,
+            "label": "SW1 Detached mode",
+            "description": "0 not detached, 1 detached"
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:38.912Z"
+        },
+        {
+          "property": 8,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "format": 1,
+            "valueSize": 1,
+            "requiresReInclusion": false,
+            "allowManualEntry": true,
+            "isAdvanced": false,
+            "noBulkSupport": false,
+            "isFromConfig": false,
+            "min": 0,
+            "max": 1,
+            "default": 0,
+            "label": "SW2 Detached mode",
+            "description": "0 not detached, 1 detached"
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:39.636Z"
+        },
+        {
+          "property": 74,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "format": 1,
+            "valueSize": 2,
+            "requiresReInclusion": false,
+            "allowManualEntry": true,
+            "isAdvanced": false,
+            "noBulkSupport": false,
+            "isFromConfig": false,
+            "min": 0,
+            "max": 65535,
+            "default": 6000,
+            "label": "Up time",
+            "description": "0 - 65535, 0.1 s units"
+          },
+          "value": 6000,
+          "timestamp": "2026-05-03T14:23:40.354Z"
+        },
+        {
+          "property": 75,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "format": 1,
+            "valueSize": 2,
+            "requiresReInclusion": false,
+            "allowManualEntry": true,
+            "isAdvanced": false,
+            "noBulkSupport": false,
+            "isFromConfig": false,
+            "min": 0,
+            "max": 65535,
+            "default": 6000,
+            "label": "Down time",
+            "description": "0 - 65535, 0.1 s units"
+          },
+          "value": 6000,
+          "timestamp": "2026-05-03T14:23:41.070Z"
+        },
+        {
+          "property": 118,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "format": 1,
+            "valueSize": 1,
+            "requiresReInclusion": false,
+            "allowManualEntry": true,
+            "isAdvanced": false,
+            "noBulkSupport": false,
+            "isFromConfig": false,
+            "min": 0,
+            "max": 1,
+            "default": 0,
+            "label": "Enable SW for exclusion",
+            "description": "1 Enabled, 0 Disabled"
+          },
+          "value": 0,
+          "timestamp": "2026-05-03T14:23:41.794Z"
+        }
+      ]
+    },
+    "Manufacturer Specific": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 2,
+      "values": [
+        {
+          "property": "productId",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 65535,
+            "label": "Product ID"
+          },
+          "value": 131,
+          "timestamp": "2026-05-03T14:20:35.232Z"
+        },
+        {
+          "property": "productType",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 65535,
+            "label": "Product type"
+          },
+          "value": 3,
+          "timestamp": "2026-05-03T14:20:35.239Z"
+        },
+        {
+          "property": "manufacturerId",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 65535,
+            "label": "Manufacturer ID"
+          },
+          "value": 1120,
+          "timestamp": "2026-05-03T14:20:35.244Z"
+        }
+      ]
+    },
+    "Window Covering": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 1,
+      "values": [
+        {
+          "property": "supportedParameters",
+          "internal": true
+        }
+      ]
+    },
+    "Basic": {
+      "isSupported": false,
+      "isControlled": false,
+      "secure": false,
+      "version": 2,
+      "values": []
+    }
+  },
+  "maySupportBasicCC": false,
+  "endpoints": {
+    "1": {
+      "index": 1,
+      "deviceClass": {
+        "basic": {
+          "key": 4,
+          "label": "Routing End Node"
+        },
+        "generic": {
+          "key": 17,
+          "label": "Multilevel Switch"
+        },
+        "specific": {
+          "key": 6,
+          "label": "Motor Control Class B"
+        }
+      },
+      "commandClasses": {
+        "Z-Wave Plus Info": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": false,
+          "version": 0,
+          "values": [
+            {
+              "property": "userIcon",
+              "value": 6144,
+              "timestamp": "2026-05-03T14:21:35.289Z",
+              "internal": true
+            },
+            {
+              "property": "installerIcon",
+              "value": 6144,
+              "timestamp": "2026-05-03T14:21:35.289Z",
+              "internal": true
+            }
+          ]
+        },
+        "Security": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": []
+        },
+        "Security 2": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": []
+        },
+        "Supervision": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": false,
+          "version": 0,
+          "values": []
+        },
+        "Association": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": [
+            {
+              "property": "groupCount",
+              "value": 3,
+              "timestamp": "2026-05-03T14:21:40.419Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 1,
+              "value": [],
+              "timestamp": "2026-05-03T14:21:41.146Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 1,
+              "value": 0,
+              "timestamp": "2026-05-03T14:21:41.146Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 2,
+              "value": [],
+              "timestamp": "2026-05-03T14:21:41.869Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 2,
+              "value": 9,
+              "timestamp": "2026-05-03T14:21:41.870Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 3,
+              "value": [],
+              "timestamp": "2026-05-03T14:21:43.092Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 3,
+              "value": 9,
+              "timestamp": "2026-05-03T14:21:43.092Z",
+              "internal": true
+            },
+            {
+              "property": "hasLifeline",
+              "value": true,
+              "timestamp": "2026-05-03T14:21:46.095Z",
+              "internal": true
+            }
+          ]
+        },
+        "Multi Channel Association": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": [
+            {
+              "property": "groupCount",
+              "value": 3,
+              "timestamp": "2026-05-03T14:21:43.524Z",
+              "internal": true
+            },
+            {
+              "property": "endpoints",
+              "propertyKey": 1,
+              "value": [],
+              "timestamp": "2026-05-03T14:21:44.656Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 1,
+              "value": [],
+              "timestamp": "2026-05-03T14:21:44.657Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 1,
+              "value": 0,
+              "timestamp": "2026-05-03T14:21:44.657Z",
+              "internal": true
+            },
+            {
+              "property": "endpoints",
+              "propertyKey": 2,
+              "value": [],
+              "timestamp": "2026-05-03T14:21:45.383Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 2,
+              "value": [],
+              "timestamp": "2026-05-03T14:21:45.383Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 2,
+              "value": 9,
+              "timestamp": "2026-05-03T14:21:45.384Z",
+              "internal": true
+            },
+            {
+              "property": "endpoints",
+              "propertyKey": 3,
+              "value": [],
+              "timestamp": "2026-05-03T14:21:46.088Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 3,
+              "value": [],
+              "timestamp": "2026-05-03T14:21:46.089Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 3,
+              "value": 9,
+              "timestamp": "2026-05-03T14:21:46.089Z",
+              "internal": true
+            }
+          ]
+        },
+        "Association Group Information": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": [
+            {
+              "property": "name",
+              "propertyKey": 1,
+              "value": "Lifeline",
+              "timestamp": "2026-05-03T14:21:46.858Z",
+              "internal": true
+            },
+            {
+              "property": "issuedCommands",
+              "propertyKey": 1,
+              "value": {
+                "38": [
+                  3
+                ],
+                "50": [
+                  2
+                ],
+                "113": [
+                  5
+                ],
+                "$$type$$": "map"
+              },
+              "timestamp": "2026-05-03T14:21:47.650Z",
+              "internal": true
+            },
+            {
+              "property": "issuedCommands",
+              "propertyKey": 2,
+              "value": {
+                "32": [
+                  1
+                ],
+                "$$type$$": "map"
+              },
+              "timestamp": "2026-05-03T14:21:52.800Z",
+              "internal": true
+            },
+            {
+              "property": "name",
+              "propertyKey": 3,
+              "value": "Long press press [SW1]",
+              "timestamp": "2026-05-03T14:21:53.590Z",
+              "internal": true
+            },
+            {
+              "property": "issuedCommands",
+              "propertyKey": 3,
+              "value": {
+                "38": [
+                  4,
+                  5
+                ],
+                "$$type$$": "map"
+              },
+              "timestamp": "2026-05-03T14:21:54.300Z",
+              "internal": true
+            },
+            {
+              "property": "hasDynamicInfo",
+              "value": false,
+              "timestamp": "2026-05-03T14:21:56.551Z",
+              "internal": true
+            },
+            {
+              "property": "info",
+              "propertyKey": 1,
+              "value": {
+                "mode": 0,
+                "profile": 1,
+                "eventCode": 0
+              },
+              "timestamp": "2026-05-03T14:21:55.060Z",
+              "internal": true
+            },
+            {
+              "property": "info",
+              "propertyKey": 2,
+              "value": {
+                "mode": 0,
+                "profile": 8193,
+                "eventCode": 0
+              },
+              "timestamp": "2026-05-03T14:21:55.760Z",
+              "internal": true
+            },
+            {
+              "property": "info",
+              "propertyKey": 3,
+              "value": {
+                "mode": 0,
+                "profile": 8193,
+                "eventCode": 0
+              },
+              "timestamp": "2026-05-03T14:21:56.552Z",
+              "internal": true
+            }
+          ]
+        },
+        "Meter": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": [
+            {
+              "property": "supportedRateTypes",
+              "value": [
+                1
+              ],
+              "timestamp": "2026-05-03T14:21:36.070Z",
+              "internal": true
+            },
+            {
+              "property": "supportedScales",
+              "value": [
+                0,
+                2
+              ],
+              "timestamp": "2026-05-03T14:21:36.072Z",
+              "internal": true
+            },
+            {
+              "property": "supportsReset",
+              "value": true,
+              "timestamp": "2026-05-03T14:21:36.073Z",
+              "internal": true
+            },
+            {
+              "property": "type",
+              "value": 1,
+              "timestamp": "2026-05-03T14:21:36.075Z",
+              "internal": true
+            },
+            {
+              "property": "value",
+              "propertyKey": 65537,
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "ccSpecific": {
+                  "meterType": 1,
+                  "scale": 0,
+                  "rateType": 1
+                },
+                "label": "Electric Consumption [kWh]",
+                "unit": "kWh"
+              },
+              "value": 0.07,
+              "timestamp": "2026-07-10T23:29:19.809Z"
+            },
+            {
+              "property": "value",
+              "propertyKey": 66049,
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "ccSpecific": {
+                  "meterType": 1,
+                  "scale": 2,
+                  "rateType": 1
+                },
+                "label": "Electric Consumption [W]",
+                "unit": "W"
+              },
+              "value": 0,
+              "timestamp": "2026-07-11T08:29:46.612Z"
+            },
+            {
+              "property": "reset",
+              "propertyKey": 65537,
+              "metadata": {
+                "type": "boolean",
+                "readable": false,
+                "writeable": true,
+                "label": "Reset Electric Consumption [kWh]",
+                "states": {
+                  "true": "Reset"
+                },
+                "ccSpecific": {
+                  "meterType": 1,
+                  "rateType": 1,
+                  "scale": 0
+                }
+              }
+            },
+            {
+              "property": "reset"
+            }
+          ]
+        },
+        "Multilevel Switch": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 4,
+          "values": [
+            {
+              "property": "switchType",
+              "value": 2,
+              "timestamp": "2026-05-03T14:21:38.853Z",
+              "internal": true
+            },
+            {
+              "property": "currentValue",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 99,
+                "label": "Current value"
+              },
+              "value": 0,
+              "timestamp": "2026-07-11T08:29:45.312Z"
+            },
+            {
+              "property": "duration",
+              "metadata": {
+                "type": "duration",
+                "readable": true,
+                "writeable": false,
+                "label": "Remaining duration"
+              },
+              "value": {
+                "value": 0,
+                "unit": "seconds",
+                "$$type$$": "duration"
+              },
+              "timestamp": "2026-07-11T08:29:45.319Z"
+            },
+            {
+              "property": "targetValue",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": true,
+                "min": 0,
+                "max": 99,
+                "label": "Target value",
+                "valueChangeOptions": [
+                  "transitionDuration"
+                ]
+              },
+              "value": 0,
+              "timestamp": "2026-07-11T08:29:45.331Z"
+            },
+            {
+              "property": "Up",
+              "metadata": {
+                "type": "boolean",
+                "readable": false,
+                "writeable": true,
+                "label": "Perform a level change (Up)",
+                "valueChangeOptions": [
+                  "transitionDuration"
+                ],
+                "states": {
+                  "true": "Start",
+                  "false": "Stop"
+                },
+                "ccSpecific": {
+                  "switchType": 2
+                }
+              }
+            },
+            {
+              "property": "Down",
+              "metadata": {
+                "type": "boolean",
+                "readable": false,
+                "writeable": true,
+                "label": "Perform a level change (Down)",
+                "valueChangeOptions": [
+                  "transitionDuration"
+                ],
+                "states": {
+                  "true": "Start",
+                  "false": "Stop"
+                },
+                "ccSpecific": {
+                  "switchType": 2
+                }
+              }
+            },
+            {
+              "property": "restorePrevious"
+            }
+          ]
+        },
+        "Notification": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": [
+            {
+              "property": "alarmType",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Alarm Type"
+              },
+              "value": 0,
+              "timestamp": "2026-05-03T14:21:59.293Z"
+            },
+            {
+              "property": "alarmLevel",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Alarm Level"
+              },
+              "value": 0,
+              "timestamp": "2026-05-03T14:21:59.296Z"
+            },
+            {
+              "property": "lastRefresh",
+              "value": 1777818119304,
+              "timestamp": "2026-05-03T14:21:59.305Z",
+              "internal": true
+            },
+            {
+              "property": "Power Management",
+              "propertyKey": "Over-current status",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Over-current status",
+                "states": {
+                  "0": "idle",
+                  "6": "Over-current detected"
+                },
+                "ccSpecific": {
+                  "notificationType": 8
+                }
+              },
+              "value": 0,
+              "timestamp": "2026-05-03T14:22:00.187Z"
+            },
+            {
+              "property": "Power Management",
+              "propertyKey": "Over-voltage status",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Over-voltage status",
+                "states": {
+                  "0": "idle",
+                  "7": "Over-voltage detected"
+                },
+                "ccSpecific": {
+                  "notificationType": 8
+                }
+              },
+              "value": 0,
+              "timestamp": "2026-05-03T14:22:00.190Z"
+            },
+            {
+              "property": "Power Management",
+              "propertyKey": "Over-load status",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Over-load status",
+                "states": {
+                  "0": "idle",
+                  "8": "Over-load detected"
+                },
+                "ccSpecific": {
+                  "notificationType": 8
+                }
+              },
+              "value": 0,
+              "timestamp": "2026-05-03T14:22:00.193Z"
+            },
+            {
+              "property": "Power Management",
+              "propertyKey": "Mains status",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Mains status",
+                "states": {
+                  "2": "AC mains disconnected"
+                },
+                "ccSpecific": {
+                  "notificationType": 8
+                }
+              }
+            }
+          ]
+        }
+      },
+      "maySupportBasicCC": false
+    },
+    "2": {
+      "index": 2,
+      "deviceClass": {
+        "basic": {
+          "key": 4,
+          "label": "Routing End Node"
+        },
+        "generic": {
+          "key": 17,
+          "label": "Multilevel Switch"
+        },
+        "specific": {
+          "key": 6,
+          "label": "Motor Control Class B"
+        }
+      },
+      "commandClasses": {
+        "Z-Wave Plus Info": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": false,
+          "version": 0,
+          "values": [
+            {
+              "property": "userIcon",
+              "value": 6144,
+              "timestamp": "2026-05-03T14:22:02.831Z",
+              "internal": true
+            },
+            {
+              "property": "installerIcon",
+              "value": 6144,
+              "timestamp": "2026-05-03T14:22:02.832Z",
+              "internal": true
+            }
+          ]
+        },
+        "Security": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": []
+        },
+        "Security 2": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": []
+        },
+        "Supervision": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": false,
+          "version": 0,
+          "values": []
+        },
+        "Association": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": [
+            {
+              "property": "groupCount",
+              "value": 3,
+              "timestamp": "2026-05-03T14:22:11.319Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 1,
+              "value": [],
+              "timestamp": "2026-05-03T14:22:12.001Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 1,
+              "value": 0,
+              "timestamp": "2026-05-03T14:22:12.002Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 2,
+              "value": [],
+              "timestamp": "2026-05-03T14:22:12.678Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 2,
+              "value": 9,
+              "timestamp": "2026-05-03T14:22:12.678Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 3,
+              "value": [],
+              "timestamp": "2026-05-03T14:22:13.823Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 3,
+              "value": 9,
+              "timestamp": "2026-05-03T14:22:13.824Z",
+              "internal": true
+            },
+            {
+              "property": "hasLifeline",
+              "value": true,
+              "timestamp": "2026-05-03T14:22:16.678Z",
+              "internal": true
+            }
+          ]
+        },
+        "Multi Channel Association": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": [
+            {
+              "property": "groupCount",
+              "value": 3,
+              "timestamp": "2026-05-03T14:22:14.261Z",
+              "internal": true
+            },
+            {
+              "property": "endpoints",
+              "propertyKey": 1,
+              "value": [],
+              "timestamp": "2026-05-03T14:22:15.319Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 1,
+              "value": [],
+              "timestamp": "2026-05-03T14:22:15.319Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 1,
+              "value": 0,
+              "timestamp": "2026-05-03T14:22:15.320Z",
+              "internal": true
+            },
+            {
+              "property": "endpoints",
+              "propertyKey": 2,
+              "value": [],
+              "timestamp": "2026-05-03T14:22:16.000Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 2,
+              "value": [],
+              "timestamp": "2026-05-03T14:22:16.001Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 2,
+              "value": 9,
+              "timestamp": "2026-05-03T14:22:16.002Z",
+              "internal": true
+            },
+            {
+              "property": "endpoints",
+              "propertyKey": 3,
+              "value": [],
+              "timestamp": "2026-05-03T14:22:16.673Z",
+              "internal": true
+            },
+            {
+              "property": "nodeIds",
+              "propertyKey": 3,
+              "value": [],
+              "timestamp": "2026-05-03T14:22:16.674Z",
+              "internal": true
+            },
+            {
+              "property": "maxNodes",
+              "propertyKey": 3,
+              "value": 9,
+              "timestamp": "2026-05-03T14:22:16.674Z",
+              "internal": true
+            }
+          ]
+        },
+        "Association Group Information": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": [
+            {
+              "property": "name",
+              "propertyKey": 1,
+              "value": "Lifeline",
+              "timestamp": "2026-05-03T14:22:17.378Z",
+              "internal": true
+            },
+            {
+              "property": "issuedCommands",
+              "propertyKey": 1,
+              "value": {
+                "38": [
+                  3
+                ],
+                "113": [
+                  5
+                ],
+                "$$type$$": "map"
+              },
+              "timestamp": "2026-05-03T14:22:18.668Z",
+              "internal": true
+            },
+            {
+              "property": "issuedCommands",
+              "propertyKey": 2,
+              "value": {
+                "32": [
+                  1
+                ],
+                "$$type$$": "map"
+              },
+              "timestamp": "2026-05-03T14:22:22.784Z",
+              "internal": true
+            },
+            {
+              "property": "name",
+              "propertyKey": 3,
+              "value": "Long press press [SW2]",
+              "timestamp": "2026-05-03T14:22:23.863Z",
+              "internal": true
+            },
+            {
+              "property": "issuedCommands",
+              "propertyKey": 3,
+              "value": {
+                "38": [
+                  4,
+                  5
+                ],
+                "$$type$$": "map"
+              },
+              "timestamp": "2026-05-03T14:22:25.025Z",
+              "internal": true
+            },
+            {
+              "property": "hasDynamicInfo",
+              "value": false,
+              "timestamp": "2026-05-03T14:22:27.994Z",
+              "internal": true
+            },
+            {
+              "property": "info",
+              "propertyKey": 1,
+              "value": {
+                "mode": 0,
+                "profile": 1,
+                "eventCode": 0
+              },
+              "timestamp": "2026-05-03T14:22:26.067Z",
+              "internal": true
+            },
+            {
+              "property": "info",
+              "propertyKey": 2,
+              "value": {
+                "mode": 0,
+                "profile": 8194,
+                "eventCode": 0
+              },
+              "timestamp": "2026-05-03T14:22:27.295Z",
+              "internal": true
+            },
+            {
+              "property": "info",
+              "propertyKey": 3,
+              "value": {
+                "mode": 0,
+                "profile": 8194,
+                "eventCode": 0
+              },
+              "timestamp": "2026-05-03T14:22:27.995Z",
+              "internal": true
+            }
+          ]
+        },
+        "Multilevel Switch": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 4,
+          "values": [
+            {
+              "property": "switchType",
+              "value": 2,
+              "timestamp": "2026-05-03T14:22:03.590Z",
+              "internal": true
+            },
+            {
+              "property": "currentValue",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 99,
+                "label": "Current value"
+              },
+              "value": 0,
+              "timestamp": "2026-07-11T08:29:45.956Z"
+            },
+            {
+              "property": "duration",
+              "metadata": {
+                "type": "duration",
+                "readable": true,
+                "writeable": false,
+                "label": "Remaining duration"
+              },
+              "value": {
+                "value": 0,
+                "unit": "seconds",
+                "$$type$$": "duration"
+              },
+              "timestamp": "2026-07-11T08:29:45.963Z"
+            },
+            {
+              "property": "targetValue",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": true,
+                "min": 0,
+                "max": 99,
+                "label": "Target value",
+                "valueChangeOptions": [
+                  "transitionDuration"
+                ]
+              },
+              "value": 0,
+              "timestamp": "2026-07-11T08:29:45.969Z"
+            },
+            {
+              "property": "Up",
+              "metadata": {
+                "type": "boolean",
+                "readable": false,
+                "writeable": true,
+                "label": "Perform a level change (Up)",
+                "valueChangeOptions": [
+                  "transitionDuration"
+                ],
+                "states": {
+                  "true": "Start",
+                  "false": "Stop"
+                },
+                "ccSpecific": {
+                  "switchType": 2
+                }
+              }
+            },
+            {
+              "property": "Down",
+              "metadata": {
+                "type": "boolean",
+                "readable": false,
+                "writeable": true,
+                "label": "Perform a level change (Down)",
+                "valueChangeOptions": [
+                  "transitionDuration"
+                ],
+                "states": {
+                  "true": "Start",
+                  "false": "Stop"
+                },
+                "ccSpecific": {
+                  "switchType": 2
+                }
+              }
+            },
+            {
+              "property": "restorePrevious"
+            }
+          ]
+        },
+        "Notification": {
+          "isSupported": true,
+          "isControlled": false,
+          "secure": true,
+          "version": 0,
+          "values": [
+            {
+              "property": "alarmType",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Alarm Type"
+              },
+              "value": 0,
+              "timestamp": "2026-05-03T14:22:30.237Z"
+            },
+            {
+              "property": "alarmLevel",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Alarm Level"
+              },
+              "value": 0,
+              "timestamp": "2026-05-03T14:22:30.239Z"
+            },
+            {
+              "property": "lastRefresh",
+              "value": 1777818150241,
+              "timestamp": "2026-05-03T14:22:30.241Z",
+              "internal": true
+            },
+            {
+              "property": "Power Management",
+              "propertyKey": "Over-current status",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Over-current status",
+                "states": {
+                  "0": "idle",
+                  "6": "Over-current detected"
+                },
+                "ccSpecific": {
+                  "notificationType": 8
+                }
+              },
+              "value": 0,
+              "timestamp": "2026-05-03T14:22:31.110Z"
+            },
+            {
+              "property": "Power Management",
+              "propertyKey": "Over-voltage status",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Over-voltage status",
+                "states": {
+                  "0": "idle",
+                  "7": "Over-voltage detected"
+                },
+                "ccSpecific": {
+                  "notificationType": 8
+                }
+              },
+              "value": 0,
+              "timestamp": "2026-05-03T14:22:31.111Z"
+            },
+            {
+              "property": "Power Management",
+              "propertyKey": "Over-load status",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Over-load status",
+                "states": {
+                  "0": "idle",
+                  "8": "Over-load detected"
+                },
+                "ccSpecific": {
+                  "notificationType": 8
+                }
+              },
+              "value": 0,
+              "timestamp": "2026-05-03T14:22:31.112Z"
+            },
+            {
+              "property": "Power Management",
+              "propertyKey": "Mains status",
+              "metadata": {
+                "type": "number",
+                "readable": true,
+                "writeable": false,
+                "min": 0,
+                "max": 255,
+                "label": "Mains status",
+                "states": {
+                  "2": "AC mains disconnected"
+                },
+                "ccSpecific": {
+                  "notificationType": 8
+                }
+              }
+            }
+          ]
+        }
+      },
+      "maySupportBasicCC": false
+    }
+  },
+  "configFileName": "/usr/src/app/store/.config-db/devices/0x0460/qlsh-001P10.json"
+}
