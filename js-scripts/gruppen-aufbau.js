@@ -3,7 +3,7 @@
 //
 // Liest die Gruppen-Konfiguration aus einer flachen JSON-Tabelle im
 // Dateispeicher:
-//   0_userdata.0 : alias/gruppen.json
+//   0_userdata.0 : configuration.read.by.scripts/gruppen.json
 //
 // Baut daraus pro Gruppe eine von drei Varianten:
 //   A = zwei Szenen als "Taster" (scene.0.<gruppe>_auf / _zu, feste Werte)
@@ -28,7 +28,7 @@
 // ============================================================================
 
 const FILE_ADAPTER = '0_userdata.0';
-const FILE_GRUPPEN = 'alias/gruppen.json';
+const FILE_GRUPPEN = 'configuration.read.by.scripts/gruppen.json';
 
 main();
 
@@ -37,7 +37,7 @@ async function main() {
     try {
         gruppen = JSON.parse((await readFileAsync(FILE_ADAPTER, FILE_GRUPPEN)).toString());
     } catch (err) {
-        log(`Konnte JSON-Konfig nicht lesen/parsen (liegt gruppen.json unter ${FILE_ADAPTER}/alias/?): ${err}`, 'error');
+        log(`Konnte JSON-Konfig nicht lesen/parsen (liegt gruppen.json unter ${FILE_ADAPTER}/configuration.read.by.scripts/?): ${err}`, 'error');
         return;
     }
 

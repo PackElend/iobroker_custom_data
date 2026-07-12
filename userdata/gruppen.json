@@ -8,31 +8,36 @@
     "wertZu": 100,
     "wertAuf": 0,
     "mitglieder": [
-      "alias.0.ShellyWaveShutter.SET"
+      "alias.0.scripted aliases.JalousieKinderzimmmer.SET",
+      "alias.0.scripted aliases.JalousieSchlafzimmer.SET",
+      "alias.0.scripted aliases.BalkontürSchalfzimmer.SET",
+      "alias.0.scripted aliases.JalousieArbeitszimmer.SET"
     ]
   },
   {
-    "gruppe": "Jalousien_sued",
-    "name": "Jalousien Suedseite",
+    "gruppe": "Jalousien_schlafzimmer",
+    "name": "Jalousien Schlafzimmer",
     "variante": "B",
     "raum": "Zentrale",
     "funktion": "Jalousie",
     "wertZu": null,
     "wertAuf": null,
     "mitglieder": [
-      "alias.0.ShellyWaveShutter.SET"
+      "alias.0.scripted aliases.JalousieSchlafzimmer.SET",
+      "alias.0.scripted aliases.BalkontürSchalfzimmer.SET"
     ]
   },
   {
-    "gruppe": "Jalousien_eg",
-    "name": "Jalousien Erdgeschoss",
+    "gruppe": "Jalousien_kinderarbeitszimmer",
+    "name": "Jalousien Kinder- und Arbeitszimmer",
     "variante": "C",
     "raum": "Zentrale",
     "funktion": "Jalousie",
     "wertZu": null,
     "wertAuf": null,
     "mitglieder": [
-      "alias.0.ShellyWaveShutter.SET"
+      "alias.0.scripted aliases.JalousieKinderzimmmer.SET",
+      "alias.0.scripted aliases.JalousieArbeitszimmer.SET"
     ]
   }
 ]
