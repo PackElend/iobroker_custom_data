@@ -1,7 +1,42 @@
 {
-  "modus": "dummy",
+  "modus": "echt",
   "geraete": [
-    { "alias": "ShellyWaveShutter",    "vorlage": "jalousie", "zielEcht": "zwavews.0.nodeID_006", "zielDummy": "0_userdata.0.dummy.ShellyWaveShutter" },
-    { "alias": "FensterArbeitszimmer", "vorlage": "fenster",  "zielEcht": "zwavews.0.nodeID_009", "zielDummy": "0_userdata.0.dummy.FensterArbeitszimmer" }
+    {
+      "alias": "FensterArbeitszimmer",
+      "vorlage": "fenster",
+      "zielEcht": "zwavews.0.nodeID_009",
+      "zielDummy": "0_userdata.0.dummy.FensterArbeitszimmer",
+      "aliasAdapter": "alias.0",
+      "aliasOrdner": "scripted aliases"
+    },
+    {
+      "alias": "JalousieKinderzimmmer",
+      "vorlage": "jalousie",
+      "zielEcht": "zwavews.0.nodeID_004",
+      "zielDummy": "0_userdata.0.dummy.JalousieKinderzimmmer",
+      "aliasAdapter": "alias.0",
+      "aliasOrdner": "scripted aliases"
+    },{
+      "alias": "JalousieSchlafzimmer",
+      "vorlage": "jalousie",
+      "zielEcht": "zwavews.0.nodeID_005",
+      "zielDummy": "0_userdata.0.dummy.JalousieSchlafzimmer",
+      "aliasAdapter": "alias.0",
+      "aliasOrdner": "scripted aliases"
+    },{
+      "alias": "BalkontürSchalfzimmer",
+      "vorlage": "jalousie",
+      "zielEcht": "zwavews.0.nodeID_019",
+      "zielDummy": "0_userdata.0.dummy.JalousieBalkontürSchlafzimmer",
+      "aliasAdapter": "alias.0",
+      "aliasOrdner": "scripted aliases"
+    },{
+      "alias": "JalousieArbeitszimmer",
+      "vorlage": "jalousie",
+      "zielEcht": "zwavews.0.nodeID_006",
+      "zielDummy": "0_userdata.0.dummy.JalousieArbeitszimmer",
+      "aliasAdapter": "alias.0",
+      "aliasOrdner": "scripted aliases"
+    }
   ]
 }

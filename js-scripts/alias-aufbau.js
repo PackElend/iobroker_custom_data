@@ -2,8 +2,8 @@
 // ALIAS-AUFBAU  (ein Skript unter "common", Typ "Javascript")
 //
 // Liest die Konfiguration aus zwei JSON-Dateien im Dateispeicher:
-//   0_userdata.0 : alias/vorlagen.json   (Vorlagen-Bibliothek, flache Tabelle)
-//   0_userdata.0 : alias/mapping.json    ({ "modus": ..., "geraete": [...] })
+//   0_userdata.0 : configuration.read.by.scripts/vorlagen.json (Vorlagen-Bibliothek, flache Tabelle)
+//   0_userdata.0 : configuration.read.by.scripts/mapping.json  ({ "modus": ..., "geraete": [...] })
 //
 // Modus (global in mapping.json):
 //   "dummy" -> Aliase zeigen auf Dummy-States unter 0_userdata.0.dummy.*;
@@ -22,13 +22,25 @@
 // Nur getaggte Aliase, die nicht mehr in mapping.json stehen, werden
 // aufgeraeumt. Manuell erstellte Objekte ohne Marker (und die Objekte von
 // gruppen-aufbau.js, Marker native.gruppenAufbau) werden nie angefasst.
+//
+// Ziel-Adapter/-Ordner je Geraet (beides optional, in mapping.json pro
+// Geraet ueberschreibbar):
+//   "aliasAdapter" -> Alias-Adapter-Instanz, Default: STANDARD_ALIAS_ADAPTER
+//   "aliasOrdner"  -> Unterordner darunter,   Default: STANDARD_ALIAS_ORDNER
+// Ergibt z.B. "alias.0.scripted aliases.<Alias>". Damit bleibt die
+// Skript-Struktur von manuell/anderweitig angelegten Alias-Objekten (z.B.
+// ueber die Devices-Adapter-Oberflaeche) sauber getrennt -- eine Kollision
+// zweier Strukturen mit gleichem Alias-Namen fuehrt sonst zu doppelten,
+// verschachtelten Objekten.
 // ============================================================================
 
 const FILE_ADAPTER = '0_userdata.0';
-const FILE_VORLAGEN = 'alias/vorlagen.json';
-const FILE_MAPPING = 'alias/mapping.json';
+const FILE_VORLAGEN = 'configuration.read.by.scripts/vorlagen.json';
+const FILE_MAPPING = 'configuration.read.by.scripts/mapping.json';
 
 const DUMMY_WURZEL = '0_userdata.0.dummy';
+const STANDARD_ALIAS_ADAPTER = 'alias.0';
+const STANDARD_ALIAS_ORDNER = 'scripted aliases';
 
 // Optionale Aufraeumfunktion fuer die Dummy-States: bewusst NICHT automatisch.
 // Bei Bedarf (sinnvoll erst im Modus "echt") auf true setzen, Skript einmal
@@ -44,7 +56,7 @@ async function main() {
         vorlagenRows = JSON.parse((await readFileAsync(FILE_ADAPTER, FILE_VORLAGEN)).toString());
         konfig = JSON.parse((await readFileAsync(FILE_ADAPTER, FILE_MAPPING)).toString());
     } catch (err) {
-        log(`Konnte JSON-Konfig nicht lesen/parsen (liegen vorlagen.json/mapping.json unter ${FILE_ADAPTER}/alias/?): ${err}`, 'error');
+        log(`Konnte JSON-Konfig nicht lesen/parsen (liegen vorlagen.json/mapping.json unter ${FILE_ADAPTER}/configuration.read.by.scripts/?): ${err}`, 'error');
         return;
     }
 
@@ -159,7 +171,9 @@ async function dummyStatesSicherstellen(geraet, def) {
 // (common.alias) beim Modus-Wechsel. Objekt-IDs bleiben immer stabil.
 // ---------------------------------------------------------------------------
 async function aliasUpsert(geraet, def, modus) {
-    const aliasId = `alias.0.${geraet.alias}`;
+    const basis = aliasBasis(geraet);
+    await ordnerSicherstellen(basis);
+    const aliasId = `${basis}.${geraet.alias}`;
 
     await upsertObjekt(aliasId, {
         type: 'channel',
@@ -246,23 +260,45 @@ async function aliasUpsert(geraet, def, modus) {
         const obj = await getObjectAsync(id);
         if (hatMarker(obj)) {
             await deleteObjectAsync(id);
-            log(`${id}: entfernt (Feld nicht mehr in Vorlage).`, 'info');
+            log(`${id}: entfernt (Feld nicht mehr in Vorlage).`, 'warn');
         }
     }
 }
 
 // ---------------------------------------------------------------------------
 // Aufraeumen: nur getaggte Alias-Kanaele, die nicht mehr in mapping.json
-// stehen. Objekte ohne Marker werden nie angefasst.
+// stehen. Objekte ohne Marker werden nie angefasst. Geprueft werden alle
+// Adapter/Ordner-Kombinationen, die aktuell in mapping.json vorkommen, plus
+// immer die Standard-Wurzel. Wechselt ein Geraet die Wurzel (aliasAdapter/
+// aliasOrdner), bleibt die alte Wurzel hier unberuecksichtigt -- dort dann
+// einmalig manuell aufraeumen.
 // ---------------------------------------------------------------------------
 async function raeumeVerwaisteAliaseAuf(geraete) {
-    const bekannt = new Set(geraete.map((g) => `alias.0.${g.alias}`));
-    for (const id of sammleIds('channel[id=alias.0.*]')) {
-        if (bekannt.has(id)) continue;
-        const obj = await getObjectAsync(id);
-        if (hatMarker(obj)) {
-            await deleteObjectAsync(id, true);
-            log(`${id}: entfernt (nicht mehr in mapping.json).`, 'info');
+    const bekannt = new Set(geraete.map((g) => `${aliasBasis(g)}.${g.alias}`));
+
+    const wurzeln = new Set(geraete.map((g) => aliasBasis(g)));
+    wurzeln.add(`${STANDARD_ALIAS_ADAPTER}.${STANDARD_ALIAS_ORDNER}`);
+
+    for (const basis of wurzeln) {
+        const tiefe = basis.split('.').length;
+
+        // Der $-Selektor "channel[id=...]" matcht das Muster gegen die
+        // Channel-ID, liefert beim Iterieren aber die States INNERHALB des
+        // Channels (nicht die Channel-ID selbst) -- daher hier auf die
+        // Segmentzahl der Wurzel + 1 kuerzen (<basis>.<name>), bevor gegen
+        // "bekannt" verglichen wird.
+        const gefunden = new Set();
+        for (const id of sammleIds(`channel[id=${basis}.*]`)) {
+            gefunden.add(id.split('.').slice(0, tiefe + 1).join('.'));
+        }
+
+        for (const id of gefunden) {
+            if (bekannt.has(id)) continue;
+            const obj = await getObjectAsync(id);
+            if (hatMarker(obj)) {
+                await deleteObjectAsync(id, true);
+                log(`${id}: entfernt (nicht mehr in mapping.json).`, 'warn');
+            }
         }
     }
 }
@@ -278,7 +314,7 @@ async function dummiesAufraeumen() {
         const obj = await getObjectAsync(id);
         if (hatMarker(obj)) {
             await deleteObjectAsync(id, true);
-            log(`${id}: Dummy entfernt.`, 'info');
+            log(`${id}: Dummy entfernt.`, 'warn');
         }
     }
     log('Dummy-Aufraeumen abgeschlossen. DUMMIES_AUFRAEUMEN wieder auf false stellen.', 'warn');
@@ -287,6 +323,29 @@ async function dummiesAufraeumen() {
 // ---------------------------------------------------------------------------
 // Hilfsfunktionen
 // ---------------------------------------------------------------------------
+
+// Alias-Wurzel eines Geraets: "<aliasAdapter>.<aliasOrdner>", je Geraet in
+// mapping.json ueberschreibbar, sonst Standardwerte.
+function aliasBasis(geraet) {
+    const adapter = geraet.aliasAdapter || STANDARD_ALIAS_ADAPTER;
+    const ordner = geraet.aliasOrdner || STANDARD_ALIAS_ORDNER;
+    return `${adapter}.${ordner}`;
+}
+
+// Ordner-Kette unterhalb der Adapter-Instanz anlegen bzw. angleichen
+// (z.B. "alias.0.scripted aliases"), analog zum Dummy-Wurzelordner.
+async function ordnerSicherstellen(basis) {
+    const teile = basis.split('.');
+    let pfad = teile.slice(0, 2).join('.'); // Adapter.Instanz existiert bereits
+    for (const segment of teile.slice(2)) {
+        pfad = `${pfad}.${segment}`;
+        await upsertObjekt(pfad, {
+            type: 'folder',
+            common: { name: segment, custom: marker() },
+            native: {},
+        });
+    }
+}
 
 // Marker fuer script-verwaltete Objekte (js-controller verlangt fuer
 // common.custom lediglich ein Objekt, keine bestimmten Schluessel)
