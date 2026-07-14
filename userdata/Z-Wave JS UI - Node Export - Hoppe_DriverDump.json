@@ -1,0 +1,1170 @@
+{
+  "id": 9,
+  "manufacturer": "Hoppe",
+  "label": "E0400Z-EF",
+  "description": "eHandle ConnectSense",
+  "fingerprint": {
+    "manufacturerId": "0x0313",
+    "productType": "0x0701",
+    "productId": "0x0002",
+    "firmwareVersion": "1.1.0",
+    "hardwareVersion": 1
+  },
+  "interviewStage": "Complete",
+  "ready": true,
+  "securityClasses": {
+    "S2_AccessControl": "unknown",
+    "S2_Authenticated": true,
+    "S2_Unauthenticated": "unknown",
+    "S0_Legacy": false
+  },
+  "failedS2Bootstrapping": false,
+  "isListening": false,
+  "isFrequentListening": false,
+  "isRouting": true,
+  "supportsBeaming": true,
+  "supportsSecurity": false,
+  "protocol": "ZWave",
+  "protocolVersion": "4.5x / 6.0x",
+  "sdkVersion": "7.15.4",
+  "supportedDataRates": [
+    40000,
+    100000
+  ],
+  "deviceClass": {
+    "basic": {
+      "key": 4,
+      "label": "Routing End Node"
+    },
+    "generic": {
+      "key": 7,
+      "label": "Notification Sensor"
+    },
+    "specific": {
+      "key": 1,
+      "label": "Notification Sensor"
+    }
+  },
+  "commandClasses": {
+    "Security 2": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 1,
+      "values": []
+    },
+    "Wake Up": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 2,
+      "values": [
+        {
+          "property": "controllerNodeId",
+          "metadata": {
+            "type": "any",
+            "readable": true,
+            "writeable": false,
+            "label": "Node ID of the controller"
+          },
+          "value": 1,
+          "timestamp": "2026-07-07T06:00:32.333Z"
+        },
+        {
+          "property": "wakeUpInterval",
+          "metadata": {
+            "type": "number",
+            "readable": false,
+            "writeable": true,
+            "min": 0,
+            "max": 15724800,
+            "allowed": [
+              {
+                "value": 0
+              },
+              {
+                "from": 3600,
+                "to": 15724800,
+                "step": 240
+              }
+            ],
+            "default": 604800,
+            "states": {
+              "0": "Disabled"
+            }
+          },
+          "value": 604800,
+          "timestamp": "2026-07-07T06:00:32.337Z"
+        }
+      ]
+    },
+    "Z-Wave Plus Info": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 2,
+      "values": [
+        {
+          "property": "userIcon",
+          "value": 3079,
+          "timestamp": "2026-05-13T20:01:03.230Z",
+          "internal": true
+        },
+        {
+          "property": "installerIcon",
+          "value": 3079,
+          "timestamp": "2026-05-13T20:01:03.231Z",
+          "internal": true
+        },
+        {
+          "property": "roleType",
+          "value": 6,
+          "timestamp": "2026-05-13T20:01:03.231Z",
+          "internal": true
+        },
+        {
+          "property": "nodeType",
+          "value": 0,
+          "timestamp": "2026-05-13T20:01:03.232Z",
+          "internal": true
+        },
+        {
+          "property": "zwavePlusVersion",
+          "value": 2,
+          "timestamp": "2026-05-13T20:01:03.232Z",
+          "internal": true
+        }
+      ]
+    },
+    "Transport Service": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 2,
+      "values": []
+    },
+    "Security": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 1,
+      "values": []
+    },
+    "Supervision": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 1,
+      "values": []
+    },
+    "Version": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 3,
+      "values": [
+        {
+          "property": "hardwareVersion",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave chip hardware version"
+          },
+          "value": 1,
+          "timestamp": "2026-05-13T20:01:02.045Z"
+        },
+        {
+          "property": "firmwareVersions",
+          "metadata": {
+            "type": "string[]",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave chip firmware versions"
+          },
+          "value": [
+            "1.1"
+          ],
+          "timestamp": "2026-05-13T20:01:02.055Z"
+        },
+        {
+          "property": "protocolVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave protocol version"
+          },
+          "value": "7.15",
+          "timestamp": "2026-05-13T20:01:02.062Z"
+        },
+        {
+          "property": "libraryType",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "label": "Library type",
+            "states": {
+              "0": "Unknown",
+              "1": "Static Controller",
+              "2": "Controller",
+              "3": "Enhanced Slave",
+              "4": "Slave",
+              "5": "Installer",
+              "6": "Routing Slave",
+              "7": "Bridge Controller",
+              "8": "Device under Test",
+              "9": "N/A",
+              "10": "AV Remote",
+              "11": "AV Device"
+            }
+          },
+          "value": 3,
+          "timestamp": "2026-05-13T20:01:02.074Z"
+        },
+        {
+          "property": "supportsZWaveSoftwareGet",
+          "value": true,
+          "timestamp": "2026-05-13T20:01:02.932Z",
+          "internal": true
+        },
+        {
+          "property": "applicationBuildNumber",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Application build number"
+          },
+          "value": 43707,
+          "timestamp": "2026-05-13T20:01:02.993Z"
+        },
+        {
+          "property": "applicationVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Application version"
+          },
+          "value": "1.1.0",
+          "timestamp": "2026-05-13T20:01:03.001Z"
+        },
+        {
+          "property": "zWaveProtocolBuildNumber",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave protocol build number"
+          },
+          "value": 256,
+          "timestamp": "2026-05-13T20:01:03.007Z"
+        },
+        {
+          "property": "zWaveProtocolVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave protocol version"
+          },
+          "value": "7.15.4",
+          "timestamp": "2026-05-13T20:01:03.012Z"
+        },
+        {
+          "property": "hostInterfaceBuildNumber",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Serial API build number"
+          },
+          "value": 0,
+          "timestamp": "2026-05-13T20:01:03.019Z"
+        },
+        {
+          "property": "hostInterfaceVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Serial API version"
+          },
+          "value": "unused",
+          "timestamp": "2026-05-13T20:01:03.025Z"
+        },
+        {
+          "property": "applicationFrameworkBuildNumber",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave application framework API build number"
+          },
+          "value": 256,
+          "timestamp": "2026-05-13T20:01:03.028Z"
+        },
+        {
+          "property": "applicationFrameworkAPIVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave application framework API version"
+          },
+          "value": "10.15.4",
+          "timestamp": "2026-05-13T20:01:03.032Z"
+        },
+        {
+          "property": "sdkVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "SDK version"
+          },
+          "value": "7.15.4",
+          "timestamp": "2026-05-13T20:01:03.038Z"
+        }
+      ]
+    },
+    "Association": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 2,
+      "values": [
+        {
+          "property": "groupCount",
+          "value": 4,
+          "timestamp": "2026-05-13T20:01:03.467Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 1,
+          "value": [
+            1
+          ],
+          "timestamp": "2026-05-13T20:01:03.512Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 1,
+          "value": 5,
+          "timestamp": "2026-05-13T20:01:03.513Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 2,
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.553Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 2,
+          "value": 5,
+          "timestamp": "2026-05-13T20:01:03.553Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 3,
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.672Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 3,
+          "value": 5,
+          "timestamp": "2026-05-13T20:01:03.673Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 4,
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.714Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 4,
+          "value": 5,
+          "timestamp": "2026-05-13T20:01:03.715Z",
+          "internal": true
+        },
+        {
+          "property": "hasLifeline",
+          "value": true,
+          "timestamp": "2026-05-13T20:01:03.946Z",
+          "internal": true
+        }
+      ]
+    },
+    "Multi Channel Association": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 3,
+      "values": [
+        {
+          "property": "groupCount",
+          "value": 4,
+          "timestamp": "2026-05-13T20:01:03.755Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 1,
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.802Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 1,
+          "value": [
+            1
+          ],
+          "timestamp": "2026-05-13T20:01:03.803Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 1,
+          "value": 5,
+          "timestamp": "2026-05-13T20:01:03.803Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 2,
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.845Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 2,
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.847Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 2,
+          "value": 5,
+          "timestamp": "2026-05-13T20:01:03.848Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 3,
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.891Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 3,
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.892Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 3,
+          "value": 5,
+          "timestamp": "2026-05-13T20:01:03.893Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 4,
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.940Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 4,
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.941Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 4,
+          "value": 5,
+          "timestamp": "2026-05-13T20:01:03.942Z",
+          "internal": true
+        }
+      ]
+    },
+    "Association Group Information": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 3,
+      "values": [
+        {
+          "property": "name",
+          "propertyKey": 1,
+          "value": "Lifeline",
+          "timestamp": "2026-05-13T20:01:04.007Z",
+          "internal": true
+        },
+        {
+          "property": "issuedCommands",
+          "propertyKey": 1,
+          "value": {
+            "48": [
+              3
+            ],
+            "90": [
+              1
+            ],
+            "113": [
+              5
+            ],
+            "128": [
+              3
+            ],
+            "$$type$$": "map"
+          },
+          "timestamp": "2026-05-13T20:01:04.062Z",
+          "internal": true
+        },
+        {
+          "property": "name",
+          "propertyKey": 2,
+          "value": "WINDOW_TILTING",
+          "timestamp": "2026-05-13T20:01:04.112Z",
+          "internal": true
+        },
+        {
+          "property": "issuedCommands",
+          "propertyKey": 2,
+          "value": {
+            "32": [
+              1
+            ],
+            "$$type$$": "map"
+          },
+          "timestamp": "2026-05-13T20:01:04.156Z",
+          "internal": true
+        },
+        {
+          "property": "name",
+          "propertyKey": 3,
+          "value": "CONTROL_ALARM",
+          "timestamp": "2026-05-13T20:01:04.200Z",
+          "internal": true
+        },
+        {
+          "property": "issuedCommands",
+          "propertyKey": 3,
+          "value": {
+            "32": [
+              1
+            ],
+            "$$type$$": "map"
+          },
+          "timestamp": "2026-05-13T20:01:04.245Z",
+          "internal": true
+        },
+        {
+          "property": "name",
+          "propertyKey": 4,
+          "value": "SECURITY_ALARM",
+          "timestamp": "2026-05-13T20:01:04.292Z",
+          "internal": true
+        },
+        {
+          "property": "issuedCommands",
+          "propertyKey": 4,
+          "value": {
+            "32": [
+              1
+            ],
+            "$$type$$": "map"
+          },
+          "timestamp": "2026-05-13T20:01:04.332Z",
+          "internal": true
+        },
+        {
+          "property": "hasDynamicInfo",
+          "value": false,
+          "timestamp": "2026-05-13T20:01:04.499Z",
+          "internal": true
+        },
+        {
+          "property": "info",
+          "propertyKey": 1,
+          "value": {
+            "mode": 0,
+            "profile": 1,
+            "eventCode": 0
+          },
+          "timestamp": "2026-05-13T20:01:04.378Z",
+          "internal": true
+        },
+        {
+          "property": "info",
+          "propertyKey": 2,
+          "value": {
+            "mode": 0,
+            "profile": 8194,
+            "eventCode": 0
+          },
+          "timestamp": "2026-05-13T20:01:04.419Z",
+          "internal": true
+        },
+        {
+          "property": "info",
+          "propertyKey": 3,
+          "value": {
+            "mode": 0,
+            "profile": 28934,
+            "eventCode": 0
+          },
+          "timestamp": "2026-05-13T20:01:04.459Z",
+          "internal": true
+        },
+        {
+          "property": "info",
+          "propertyKey": 4,
+          "value": {
+            "mode": 0,
+            "profile": 28935,
+            "eventCode": 0
+          },
+          "timestamp": "2026-05-13T20:01:04.499Z",
+          "internal": true
+        }
+      ]
+    },
+    "Manufacturer Specific": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 2,
+      "values": [
+        {
+          "property": "productId",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 65535,
+            "label": "Product ID"
+          },
+          "value": 2,
+          "timestamp": "2026-05-13T20:01:01.913Z"
+        },
+        {
+          "property": "productType",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 65535,
+            "label": "Product type"
+          },
+          "value": 1793,
+          "timestamp": "2026-05-13T20:01:01.920Z"
+        },
+        {
+          "property": "manufacturerId",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 65535,
+            "label": "Manufacturer ID"
+          },
+          "value": 787,
+          "timestamp": "2026-05-13T20:01:01.924Z"
+        }
+      ]
+    },
+    "Device Reset Locally": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 1,
+      "values": []
+    },
+    "Indicator": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 3,
+      "values": [
+        {
+          "property": "supportedPropertyIDs",
+          "propertyKey": 80,
+          "value": [
+            3,
+            4,
+            5
+          ],
+          "timestamp": "2026-05-13T20:01:03.283Z",
+          "internal": true
+        },
+        {
+          "property": "supportedIndicatorIds",
+          "value": [
+            80
+          ],
+          "timestamp": "2026-05-13T20:01:03.286Z",
+          "internal": true
+        },
+        {
+          "property": "value"
+        },
+        {
+          "property": "identify"
+        }
+      ]
+    },
+    "Powerlevel": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 1,
+      "values": []
+    },
+    "Battery": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 1,
+      "values": [
+        {
+          "property": "level",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 100,
+            "unit": "%",
+            "label": "Battery level"
+          },
+          "value": 100,
+          "timestamp": "2026-07-07T06:00:32.560Z"
+        }
+      ]
+    },
+    "Binary Sensor": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 2,
+      "values": [
+        {
+          "property": "Tilt",
+          "metadata": {
+            "type": "boolean",
+            "readable": true,
+            "writeable": false,
+            "label": "Sensor state (Tilt)",
+            "ccSpecific": {
+              "sensorType": 11
+            }
+          },
+          "value": false,
+          "timestamp": "2026-07-11T13:35:48.710Z"
+        },
+        {
+          "property": "supportedSensorTypes",
+          "value": [
+            11
+          ],
+          "timestamp": "2026-05-13T20:01:04.544Z",
+          "internal": true
+        }
+      ]
+    },
+    "Configuration": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 4,
+      "values": [
+        {
+          "property": "isParamInformationFromConfig",
+          "value": true,
+          "timestamp": "2026-05-13T20:01:04.600Z",
+          "internal": true
+        },
+        {
+          "property": 1,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 255,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 99
+              },
+              {
+                "value": 255
+              }
+            ],
+            "default": 255,
+            "format": 1,
+            "allowManualEntry": true,
+            "states": {
+              "0": "Off",
+              "255": "On / Previous state"
+            },
+            "label": "Basic Set Value (Open)",
+            "isFromConfig": true
+          },
+          "value": 255,
+          "timestamp": "2026-05-13T20:01:04.811Z"
+        },
+        {
+          "property": 2,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 255,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 99
+              },
+              {
+                "value": 255
+              }
+            ],
+            "default": 0,
+            "format": 1,
+            "allowManualEntry": true,
+            "states": {
+              "0": "Off",
+              "255": "On / Previous state"
+            },
+            "label": "Basic Set Value (Close)",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-13T20:01:04.857Z"
+        },
+        {
+          "property": 3,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 255,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 255
+              }
+            ],
+            "default": 255,
+            "format": 1,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Disable",
+              "255": "Enable"
+            },
+            "label": "Report Last State On Wakeup",
+            "isFromConfig": true
+          },
+          "value": 255,
+          "timestamp": "2026-05-13T20:01:04.907Z"
+        }
+      ]
+    },
+    "Notification": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 8,
+      "values": [
+        {
+          "property": "alarmType",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 255,
+            "label": "Alarm Type"
+          },
+          "value": 0,
+          "timestamp": "2026-07-11T13:37:04.482Z"
+        },
+        {
+          "property": "alarmLevel",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 255,
+            "label": "Alarm Level"
+          },
+          "value": 0,
+          "timestamp": "2026-07-11T13:37:04.486Z"
+        },
+        {
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "value": 0,
+          "timestamp": "2026-07-11T13:37:04.492Z"
+        },
+        {
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "value": 23,
+          "timestamp": "2026-07-11T13:37:04.505Z"
+        },
+        {
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 255,
+            "label": "Door state",
+            "states": {
+              "22": "Window/door is open",
+              "23": "Window/door is closed",
+              "5632": "Window/door is open in regular position",
+              "5633": "Window/door is open in tilt position"
+            },
+            "ccSpecific": {
+              "notificationType": 6
+            }
+          },
+          "value": 23,
+          "timestamp": "2026-07-11T13:37:04.512Z"
+        },
+        {
+          "property": "supportedNotificationTypes",
+          "value": [
+            6,
+            7
+          ],
+          "timestamp": "2026-05-13T20:01:05.263Z",
+          "internal": true
+        },
+        {
+          "property": "supportsV1Alarm",
+          "value": false,
+          "timestamp": "2026-05-13T20:01:04.958Z",
+          "internal": true
+        },
+        {
+          "property": "supportedNotificationEvents",
+          "propertyKey": 6,
+          "value": [
+            22,
+            23,
+            25,
+            24
+          ],
+          "timestamp": "2026-05-13T20:01:05.265Z",
+          "internal": true
+        },
+        {
+          "property": "supportedNotificationEvents",
+          "propertyKey": 7,
+          "value": [
+            2
+          ],
+          "timestamp": "2026-05-13T20:01:05.267Z",
+          "internal": true
+        },
+        {
+          "property": "notificationMode",
+          "value": "push",
+          "timestamp": "2026-05-13T20:01:05.065Z",
+          "internal": true
+        },
+        {
+          "property": "lastRefresh",
+          "value": 1778702465171,
+          "timestamp": "2026-05-13T20:01:05.172Z",
+          "internal": true
+        },
+        {
+          "property": "Home Security",
+          "propertyKey": "Sensor status",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 255,
+            "label": "Sensor status",
+            "states": {
+              "0": "idle",
+              "2": "Intrusion"
+            },
+            "ccSpecific": {
+              "notificationType": 7
+            }
+          },
+          "value": 0,
+          "timestamp": "2026-05-13T20:01:05.274Z"
+        },
+        {
+          "property": "Access Control",
+          "propertyKey": "Door handle state",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 255,
+            "label": "Door handle state",
+            "states": {
+              "24": "Window/door handle is open",
+              "25": "Window/door handle is closed"
+            },
+            "ccSpecific": {
+              "notificationType": 6
+            }
+          },
+          "value": 24,
+          "timestamp": "2026-07-11T13:35:48.195Z"
+        }
+      ]
+    },
+    "Firmware Update Meta Data": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": true,
+      "version": 5,
+      "values": [
+        {
+          "property": "additionalFirmwareIDs",
+          "value": [],
+          "timestamp": "2026-05-13T20:01:03.427Z",
+          "internal": true
+        },
+        {
+          "property": "firmwareUpgradable",
+          "value": true,
+          "timestamp": "2026-05-13T20:01:03.428Z",
+          "internal": true
+        },
+        {
+          "property": "supportsActivation",
+          "internal": true
+        },
+        {
+          "property": "continuesToFunction",
+          "internal": true
+        },
+        {
+          "property": "supportsResuming",
+          "internal": true
+        },
+        {
+          "property": "supportsNonSecureTransfer",
+          "internal": true
+        }
+      ]
+    }
+  },
+  "maySupportBasicCC": false,
+  "configFileName": "/usr/src/app/store/.config-db/devices/0x0313/e0400z-ef.json",
+  "compatFlags": {
+    "remapNotifications": [
+      {
+        "from": {
+          "notificationType": 6,
+          "notificationEvent": 1
+        },
+        "action": {
+          "type": "remap",
+          "to": {
+            "notificationType": 6,
+            "notificationEvent": 25
+          }
+        }
+      },
+      {
+        "from": {
+          "notificationType": 6,
+          "notificationEvent": 2
+        },
+        "action": {
+          "type": "remap",
+          "to": {
+            "notificationType": 6,
+            "notificationEvent": 24
+          }
+        }
+      },
+      {
+        "from": {
+          "notificationType": 6,
+          "notificationEvent": 7
+        },
+        "action": {
+          "type": "clear",
+          "targets": [
+            {
+              "notificationType": 6,
+              "notificationEvent": 24
+            },
+            {
+              "notificationType": 6,
+              "notificationEvent": 25
+            }
+          ]
+        }
+      },
+      {
+        "from": {
+          "notificationType": 6,
+          "notificationEvent": 254
+        },
+        "action": {
+          "type": "clear",
+          "targets": [
+            {
+              "notificationType": 6,
+              "notificationEvent": 22
+            },
+            {
+              "notificationType": 6,
+              "notificationEvent": 23
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

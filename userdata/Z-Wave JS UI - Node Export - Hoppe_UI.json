@@ -1,0 +1,2739 @@
+{
+  "id": 9,
+  "name": "Fenster",
+  "loc": "Büro",
+  "values": [
+    {
+      "id": "9-48-0-Tilt",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 48,
+      "commandClassName": "Binary Sensor",
+      "endpoint": 0,
+      "property": "Tilt",
+      "propertyName": "Tilt",
+      "type": "boolean",
+      "readable": true,
+      "writeable": false,
+      "label": "Sensor state (Tilt)",
+      "ccSpecific": {
+        "sensorType": 11
+      },
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": false,
+      "value": false,
+      "lastUpdate": 1783758563582,
+      "newValue": false
+    },
+    {
+      "id": "9-112-0-1",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 1,
+      "propertyName": "Basic Set Value (Open)",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Basic Set Value (Open)",
+      "default": 255,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 255,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 99
+        },
+        {
+          "value": 255
+        }
+      ],
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Off",
+          "value": 0
+        },
+        {
+          "text": "On / Previous state",
+          "value": 255
+        }
+      ],
+      "value": 255,
+      "lastUpdate": 1778702464811,
+      "newValue": 255
+    },
+    {
+      "id": "9-112-0-2",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 2,
+      "propertyName": "Basic Set Value (Close)",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Basic Set Value (Close)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 255,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 99
+        },
+        {
+          "value": 255
+        }
+      ],
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Off",
+          "value": 0
+        },
+        {
+          "text": "On / Previous state",
+          "value": 255
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778702464857,
+      "newValue": 0
+    },
+    {
+      "id": "9-112-0-3",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 3,
+      "propertyName": "Report Last State On Wakeup",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Report Last State On Wakeup",
+      "default": 255,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 255,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 255
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        },
+        {
+          "text": "Enable",
+          "value": 255
+        }
+      ],
+      "value": 255,
+      "lastUpdate": 1778702464907,
+      "newValue": 255
+    },
+    {
+      "id": "9-113-0-alarmType",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "alarmType",
+      "propertyName": "alarmType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Type",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783758565082,
+      "newValue": 0
+    },
+    {
+      "id": "9-113-0-alarmLevel",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "alarmLevel",
+      "propertyName": "alarmLevel",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Level",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783758565086,
+      "newValue": 0
+    },
+    {
+      "id": "9-113-0-Access Control-Opening state",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "Access Control",
+      "propertyName": "Access Control",
+      "propertyKey": "Opening state",
+      "propertyKeyName": "Opening state",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Opening state",
+      "ccSpecific": {
+        "notificationType": 6
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "Closed",
+          "value": 0
+        },
+        {
+          "text": "Open",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783758565090,
+      "newValue": 0
+    },
+    {
+      "id": "9-113-0-Access Control-Door state (simple)",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "Access Control",
+      "propertyName": "Access Control",
+      "propertyKey": "Door state (simple)",
+      "propertyKeyName": "Door state (simple)",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Door state (simple)",
+      "ccSpecific": {
+        "notificationType": 6
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "Window/door is open",
+          "value": 22
+        },
+        {
+          "text": "Window/door is closed",
+          "value": 23
+        }
+      ],
+      "value": 23,
+      "lastUpdate": 1783758565094,
+      "newValue": 23
+    },
+    {
+      "id": "9-113-0-Access Control-Door state",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "Access Control",
+      "propertyName": "Access Control",
+      "propertyKey": "Door state",
+      "propertyKeyName": "Door state",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Door state",
+      "ccSpecific": {
+        "notificationType": 6
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "Window/door is open",
+          "value": 22
+        },
+        {
+          "text": "Window/door is closed",
+          "value": 23
+        },
+        {
+          "text": "Window/door is open in regular position",
+          "value": 5632
+        },
+        {
+          "text": "Window/door is open in tilt position",
+          "value": 5633
+        }
+      ],
+      "value": 23,
+      "lastUpdate": 1783758565097,
+      "newValue": 23
+    },
+    {
+      "id": "9-113-0-Home Security-Sensor status",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "Home Security",
+      "propertyName": "Home Security",
+      "propertyKey": "Sensor status",
+      "propertyKeyName": "Sensor status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Sensor status",
+      "ccSpecific": {
+        "notificationType": 7
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Intrusion",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778702465274,
+      "newValue": 0
+    },
+    {
+      "id": "9-113-0-Access Control-Door handle state",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "Access Control",
+      "propertyName": "Access Control",
+      "propertyKey": "Door handle state",
+      "propertyKeyName": "Door handle state",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Door handle state",
+      "ccSpecific": {
+        "notificationType": 6
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "Window/door handle is open",
+          "value": 24
+        },
+        {
+          "text": "Window/door handle is closed",
+          "value": 25
+        }
+      ],
+      "value": 24,
+      "lastUpdate": 1783758563071,
+      "newValue": 24
+    },
+    {
+      "id": "9-114-0-productId",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "productId",
+      "propertyName": "productId",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Product ID",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 2,
+      "lastUpdate": 1778702461913,
+      "newValue": 2
+    },
+    {
+      "id": "9-114-0-productType",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "productType",
+      "propertyName": "productType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Product type",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 1793,
+      "lastUpdate": 1778702461920,
+      "newValue": 1793
+    },
+    {
+      "id": "9-114-0-manufacturerId",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "manufacturerId",
+      "propertyName": "manufacturerId",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Manufacturer ID",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 787,
+      "lastUpdate": 1778702461924,
+      "newValue": 787
+    },
+    {
+      "id": "9-128-0-level",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "level",
+      "propertyName": "level",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Battery level",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "list": false,
+      "value": 100,
+      "lastUpdate": 1783404032560,
+      "newValue": 100
+    },
+    {
+      "id": "9-132-0-controllerNodeId",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 132,
+      "commandClassName": "Wake Up",
+      "endpoint": 0,
+      "property": "controllerNodeId",
+      "propertyName": "controllerNodeId",
+      "type": "any",
+      "readable": true,
+      "writeable": false,
+      "label": "Node ID of the controller",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1783404032333,
+      "newValue": 1
+    },
+    {
+      "id": "9-132-0-wakeUpInterval",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 132,
+      "commandClassName": "Wake Up",
+      "endpoint": 0,
+      "property": "wakeUpInterval",
+      "propertyName": "wakeUpInterval",
+      "type": "number",
+      "readable": false,
+      "writeable": true,
+      "label": "wakeUpInterval (property)",
+      "default": 604800,
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 15724800,
+      "allowed": [
+        {
+          "value": 0
+        },
+        {
+          "from": 3600,
+          "to": 15724800,
+          "step": 240
+        }
+      ],
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disabled",
+          "value": 0
+        }
+      ],
+      "value": 604800,
+      "lastUpdate": 1783404032337,
+      "newValue": 604800
+    },
+    {
+      "id": "9-134-0-hardwareVersion",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hardwareVersion",
+      "propertyName": "hardwareVersion",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave chip hardware version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1778702462045,
+      "newValue": 1
+    },
+    {
+      "id": "9-134-0-firmwareVersions",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "firmwareVersions",
+      "propertyName": "firmwareVersions",
+      "type": "string[]",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave chip firmware versions",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": [
+        "1.1"
+      ],
+      "lastUpdate": 1778702462055,
+      "newValue": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "9-134-0-protocolVersion",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "protocolVersion",
+      "propertyName": "protocolVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.15",
+      "lastUpdate": 1778702462062,
+      "newValue": "7.15"
+    },
+    {
+      "id": "9-134-0-libraryType",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "libraryType",
+      "propertyName": "libraryType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Library type",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Unknown",
+          "value": 0
+        },
+        {
+          "text": "Static Controller",
+          "value": 1
+        },
+        {
+          "text": "Controller",
+          "value": 2
+        },
+        {
+          "text": "Enhanced Slave",
+          "value": 3
+        },
+        {
+          "text": "Slave",
+          "value": 4
+        },
+        {
+          "text": "Installer",
+          "value": 5
+        },
+        {
+          "text": "Routing Slave",
+          "value": 6
+        },
+        {
+          "text": "Bridge Controller",
+          "value": 7
+        },
+        {
+          "text": "Device under Test",
+          "value": 8
+        },
+        {
+          "text": "N/A",
+          "value": 9
+        },
+        {
+          "text": "AV Remote",
+          "value": 10
+        },
+        {
+          "text": "AV Device",
+          "value": 11
+        }
+      ],
+      "value": 3,
+      "lastUpdate": 1778702462074,
+      "newValue": 3
+    },
+    {
+      "id": "9-134-0-applicationBuildNumber",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationBuildNumber",
+      "propertyName": "applicationBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Application build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 43707,
+      "lastUpdate": 1778702462993,
+      "newValue": 43707
+    },
+    {
+      "id": "9-134-0-applicationVersion",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationVersion",
+      "propertyName": "applicationVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Application version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "1.1.0",
+      "lastUpdate": 1778702463001,
+      "newValue": "1.1.0"
+    },
+    {
+      "id": "9-134-0-zWaveProtocolBuildNumber",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "zWaveProtocolBuildNumber",
+      "propertyName": "zWaveProtocolBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 256,
+      "lastUpdate": 1778702463007,
+      "newValue": 256
+    },
+    {
+      "id": "9-134-0-zWaveProtocolVersion",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "zWaveProtocolVersion",
+      "propertyName": "zWaveProtocolVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.15.4",
+      "lastUpdate": 1778702463012,
+      "newValue": "7.15.4"
+    },
+    {
+      "id": "9-134-0-hostInterfaceBuildNumber",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hostInterfaceBuildNumber",
+      "propertyName": "hostInterfaceBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial API build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1778702463019,
+      "newValue": 0
+    },
+    {
+      "id": "9-134-0-hostInterfaceVersion",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hostInterfaceVersion",
+      "propertyName": "hostInterfaceVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial API version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "unused",
+      "lastUpdate": 1778702463025,
+      "newValue": "unused"
+    },
+    {
+      "id": "9-134-0-applicationFrameworkBuildNumber",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationFrameworkBuildNumber",
+      "propertyName": "applicationFrameworkBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave application framework API build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 256,
+      "lastUpdate": 1778702463028,
+      "newValue": 256
+    },
+    {
+      "id": "9-134-0-applicationFrameworkAPIVersion",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationFrameworkAPIVersion",
+      "propertyName": "applicationFrameworkAPIVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave application framework API version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "10.15.4",
+      "lastUpdate": 1778702463032,
+      "newValue": "10.15.4"
+    },
+    {
+      "id": "9-134-0-sdkVersion",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "sdkVersion",
+      "propertyName": "sdkVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "SDK version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.15.4",
+      "lastUpdate": 1778702463038,
+      "newValue": "7.15.4"
+    },
+    {
+      "id": "9-135-0-value",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": "value",
+      "propertyName": "value",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Indicator value",
+      "ccSpecific": {
+        "indicatorId": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "lastUpdate": 1783774999286
+    },
+    {
+      "id": "9-135-0-identify",
+      "nodeId": 9,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": "identify",
+      "propertyName": "identify",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Identify",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Identify",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783774999286
+    }
+  ],
+  "groups": [
+    {
+      "title": "Lifeline",
+      "endpoint": 0,
+      "value": 1,
+      "maxNodes": 5,
+      "isLifeline": true,
+      "multiChannel": true
+    },
+    {
+      "title": "Basic Set (Open/Close)",
+      "endpoint": 0,
+      "value": 2,
+      "maxNodes": 5,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Basic Set (Tilt/Close)",
+      "endpoint": 0,
+      "value": 3,
+      "maxNodes": 5,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Basic Set (Intrusion)",
+      "endpoint": 0,
+      "value": 4,
+      "maxNodes": 5,
+      "isLifeline": false,
+      "multiChannel": true
+    }
+  ],
+  "neighbors": [],
+  "ready": true,
+  "available": true,
+  "hassDevices": {},
+  "failed": false,
+  "inited": true,
+  "eventsQueue": [
+    {
+      "time": "2026-07-11T13:33:21.413Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 1,
+          "prevValue": 0,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:33:21.426Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:33:21.436Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:33:28.293Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:33:28.299Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:33:28.306Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 0,
+          "prevValue": 1,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:33:28.310Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 23,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:33:28.315Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 23,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:07.667Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:07.673Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:07.686Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 1,
+          "prevValue": 0,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:07.693Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:07.702Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:16.477Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:16.481Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:16.487Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 0,
+          "prevValue": 1,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:16.491Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 23,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:16.496Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 23,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:20.936Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:20.941Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:20.947Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 1,
+          "prevValue": 0,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:20.954Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:20.958Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:29.617Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:29.622Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:29.631Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door handle state",
+          "newValue": null,
+          "prevValue": 24,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door handle state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:30.151Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Sensor",
+          "commandClass": 48,
+          "endpoint": 0,
+          "property": "Tilt",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "Tilt"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:31.641Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:31.645Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:31.652Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": null,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:31.656Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": null,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:40.164Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:40.169Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:40.178Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door handle state",
+          "newValue": 25,
+          "prevValue": null,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door handle state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:40.689Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Sensor",
+          "commandClass": 48,
+          "endpoint": 0,
+          "property": "Tilt",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "Tilt"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:42.189Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:42.196Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:42.207Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 0,
+          "prevValue": 1,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:42.219Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 23,
+          "prevValue": null,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:42.227Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 23,
+          "prevValue": null,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:50.305Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:50.309Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:50.318Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door handle state",
+          "newValue": null,
+          "prevValue": 25,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door handle state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:50.831Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Sensor",
+          "commandClass": 48,
+          "endpoint": 0,
+          "property": "Tilt",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "Tilt"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:52.349Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:52.360Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:52.372Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": null,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:52.376Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": null,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:57.681Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:57.687Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:57.698Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door handle state",
+          "newValue": 24,
+          "prevValue": null,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door handle state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:58.206Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Sensor",
+          "commandClass": 48,
+          "endpoint": 0,
+          "property": "Tilt",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "Tilt"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:59.841Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:59.846Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:59.852Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:59.856Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 23,
+          "prevValue": null,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:34:59.860Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 23,
+          "prevValue": null,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:10.725Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:10.729Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:10.735Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door handle state",
+          "newValue": 24,
+          "prevValue": 24,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door handle state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:11.249Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Sensor",
+          "commandClass": 48,
+          "endpoint": 0,
+          "property": "Tilt",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "Tilt"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:23.432Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:23.436Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:23.441Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 1,
+          "prevValue": 0,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:23.446Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:23.450Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:32.252Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:32.255Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:32.263Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 0,
+          "prevValue": 1,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:32.268Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 23,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:32.274Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 23,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:39.038Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:39.042Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:39.054Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 1,
+          "prevValue": 0,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:39.060Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:39.064Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:48.187Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:48.192Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:48.198Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door handle state",
+          "newValue": 24,
+          "prevValue": 24,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door handle state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:48.712Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Sensor",
+          "commandClass": 48,
+          "endpoint": 0,
+          "property": "Tilt",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "Tilt"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:50.234Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:50.239Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:50.248Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 1,
+          "prevValue": 1,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:50.254Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 22,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:35:50.260Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 22,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:36:22.353Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:36:22.356Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:36:22.364Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 0,
+          "prevValue": 1,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:36:22.368Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 23,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:36:22.373Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 23,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:36:59.375Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:36:59.380Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:36:59.390Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 1,
+          "prevValue": 0,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:36:59.396Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:36:59.402Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 22,
+          "prevValue": 23,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:37:04.485Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:37:04.488Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:37:04.498Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Opening state",
+          "newValue": 0,
+          "prevValue": 1,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Opening state"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:37:04.511Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state (simple)",
+          "newValue": 23,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state (simple)"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-11T13:37:04.516Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Access Control",
+          "propertyKey": "Door state",
+          "newValue": 23,
+          "prevValue": 22,
+          "propertyName": "Access Control",
+          "propertyKeyName": "Door state"
+        }
+      ]
+    }
+  ],
+  "status": "Asleep",
+  "interviewStage": "Complete",
+  "priorityReturnRoute": {},
+  "customReturnRoute": {},
+  "prioritySUCReturnRoute": false,
+  "customSUCReturnRoutes": [],
+  "availableFirmwareUpdates": [],
+  "firmwareUpdatesDismissed": {},
+  "lastFirmwareUpdateCheck": 1778702465576,
+  "appliedTemplateContentHashes": [],
+  "hexId": "0x0313 0x0701-0x0002",
+  "dbLink": "https://devices.zwave-js.io/?jumpTo=0x0313:0x0701:0x0002:1.1.0",
+  "manufacturerId": 787,
+  "productId": 2,
+  "productType": 1793,
+  "deviceConfig": {
+    "filename": "/usr/src/app/store/.config-db/devices/0x0313/e0400z-ef.json",
+    "isEmbedded": true,
+    "manufacturer": "Hoppe",
+    "manufacturerId": 787,
+    "label": "E0400Z-EF",
+    "description": "eHandle ConnectSense",
+    "devices": [
+      {
+        "productType": 1793,
+        "productId": 2
+      }
+    ],
+    "firmwareVersion": {
+      "min": "0.0",
+      "max": "255.255"
+    },
+    "preferred": false,
+    "associations": {},
+    "paramInformation": {
+      "_map": {}
+    },
+    "compat": {
+      "remapNotifications": [
+        {
+          "from": {
+            "notificationType": 6,
+            "notificationEvent": 1
+          },
+          "action": {
+            "type": "remap",
+            "to": {
+              "notificationType": 6,
+              "notificationEvent": 25
+            }
+          }
+        },
+        {
+          "from": {
+            "notificationType": 6,
+            "notificationEvent": 2
+          },
+          "action": {
+            "type": "remap",
+            "to": {
+              "notificationType": 6,
+              "notificationEvent": 24
+            }
+          }
+        },
+        {
+          "from": {
+            "notificationType": 6,
+            "notificationEvent": 7
+          },
+          "action": {
+            "type": "clear",
+            "targets": [
+              {
+                "notificationType": 6,
+                "notificationEvent": 24
+              },
+              {
+                "notificationType": 6,
+                "notificationEvent": 25
+              }
+            ]
+          }
+        },
+        {
+          "from": {
+            "notificationType": 6,
+            "notificationEvent": 254
+          },
+          "action": {
+            "type": "clear",
+            "targets": [
+              {
+                "notificationType": 6,
+                "notificationEvent": 22
+              },
+              {
+                "notificationType": 6,
+                "notificationEvent": 23
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "metadata": {
+      "inclusion": "To add or remove the eHandle ConnectSense for windows in the\nsmart home central control unit, proceed as follows:\n6\n6\n8173\nferTor 13\nadtallendorf\n8\nmax.\n360°\n7\n29\nEnglish\n1. Follow the instructions of your smart home central control unit\nand start the process of adding or removing.\n2. Using the Allen key, press the hidden button in the recess on the\nback of the wireless unit three times in quick succession (within\none second), (steps 3-4).\n3. The successful start and the progress of adding (Add) or removing\n(Remove) e can be tracked in your smart home central\ncontrol unit.\n4. Your smart home central control unit may ask you to enter a\nfive-digit PIN number. You will find this on the sticker with QR\ncode. It is the underlined sequence of numbers.\n5. A successful addition (Add) is displayed in your smart home\ncentral control unit.\n6. The handle signals that it is ready for calibration by continuous\nrapid flashing of the green LED.\n7. Follow the further instructions for installation (Chapter 11) and\ncalibration (Chapter 6.2)",
+      "exclusion": "To add or remove the eHandle ConnectSense for windows in the\nsmart home central control unit, proceed as follows:\n6\n6\n8173\nferTor 13\nadtallendorf\n8\nmax.\n360°\n7\n29\nEnglish\n1. Follow the instructions of your smart home central control unit\nand start the process of adding or removing.\n2. Using the Allen key, press the hidden button in the recess on the\nback of the wireless unit three times in quick succession (within\none second), (steps 3-4).\n3. The successful start and the progress of adding (Add) or removing\n(Remove) e can be tracked in your smart home central\ncontrol unit.\n4. Your smart home central control unit may ask you to enter a\nfive-digit PIN number. You will find this on the sticker with QR\ncode. It is the underlined sequence of numbers.\n5. A successful addition (Add) is displayed in your smart home\ncentral control unit.\n6. The handle signals that it is ready for calibration by continuous\nrapid flashing of the green LED.\n7. Follow the further instructions for installation (Chapter 11) and\ncalibration (Chapter 6.2)",
+      "reset": "The eHandle ConnectSense for windows also allows to be reset\nwithout any involvement of the smart home central control unit. This\nprocedure should only be used when the smart home central control\nunit is inoperable. Press the concealed button for 10 seconds using\nthe Allen key. The successful reset to the factory setting is confirmed\nby the LED lighting up once",
+      "manual": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/4504/2022-04-19-MA441-ConnectSense-DE-EN-FR-Langversion_Korr%202022-04-20.pdf"
+    }
+  },
+  "productLabel": "E0400Z-EF",
+  "productDescription": "eHandle ConnectSense",
+  "manufacturer": "Hoppe",
+  "firmwareVersion": "1.1.0",
+  "sdkVersion": "7.15.4",
+  "protocolVersion": 3,
+  "zwavePlusVersion": 2,
+  "zwavePlusNodeType": 0,
+  "zwavePlusRoleType": 6,
+  "nodeType": 1,
+  "endpointsCount": 0,
+  "endpoints": [
+    {
+      "index": 0,
+      "label": "Root Endpoint",
+      "deviceClass": {
+        "basic": 4,
+        "generic": 7,
+        "specific": 1
+      }
+    }
+  ],
+  "isSecure": true,
+  "security": "S2_Authenticated",
+  "supportsSecurity": false,
+  "supportsBeaming": true,
+  "isControllerNode": false,
+  "isListening": false,
+  "isFrequentListening": false,
+  "isRouting": true,
+  "keepAwake": false,
+  "maxDataRate": 100000,
+  "deviceClass": {
+    "basic": 4,
+    "generic": 7,
+    "specific": 1
+  },
+  "lastActive": 1783777024479,
+  "firmwareCapabilities": {
+    "firmwareUpgradable": true,
+    "firmwareTargets": [
+      0
+    ]
+  },
+  "protocol": 0,
+  "deviceId": "787-2-1793",
+  "hasDeviceConfigChanged": false,
+  "batteryLevels": {
+    "0": 100
+  },
+  "minBatteryLevel": 100,
+  "supportsTime": false,
+  "statistics": {
+    "commandsTX": 1,
+    "commandsRX": 38,
+    "commandsDroppedRX": 1,
+    "commandsDroppedTX": 0,
+    "timeoutResponse": 0,
+    "lastSeen": "2026-07-11T13:37:04.479Z",
+    "nlwr": {
+      "repeaters": [],
+      "protocolDataRate": 3
+    },
+    "rtt": 29.6,
+    "rssi": -66,
+    "lwr": {
+      "protocolDataRate": 3,
+      "repeaters": [],
+      "rssi": -66,
+      "repeaterRSSI": []
+    }
+  },
+  "_name": "Fenster (Büro)",
+  "applicationRoute": false,
+  "lastReceive": 1783777024479,
+  "lastTransmit": 1783776758599,
+  "errorReceive": false,
+  "errorTransmit": false
+}

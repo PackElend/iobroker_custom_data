@@ -1,0 +1,2434 @@
+{
+  "id": 3,
+  "name": "Jalousie - Küche, rechts",
+  "loc": "Küche",
+  "values": [
+    {
+      "id": "3-91-0-scene-001",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 91,
+      "commandClassName": "Central Scene",
+      "endpoint": 0,
+      "property": "scene",
+      "propertyName": "scene",
+      "propertyKey": "001",
+      "propertyKeyName": "001",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Scene 001",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "KeyPressed",
+          "value": 0
+        },
+        {
+          "text": "KeyReleased",
+          "value": 1
+        },
+        {
+          "text": "KeyHeldDown",
+          "value": 2
+        },
+        {
+          "text": "KeyPressed2x",
+          "value": 3
+        }
+      ],
+      "lastUpdate": 1783775004080
+    },
+    {
+      "id": "3-91-0-scene-002",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 91,
+      "commandClassName": "Central Scene",
+      "endpoint": 0,
+      "property": "scene",
+      "propertyName": "scene",
+      "propertyKey": "002",
+      "propertyKeyName": "002",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Scene 002",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "KeyPressed",
+          "value": 0
+        },
+        {
+          "text": "KeyReleased",
+          "value": 1
+        },
+        {
+          "text": "KeyHeldDown",
+          "value": 2
+        },
+        {
+          "text": "KeyPressed2x",
+          "value": 3
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-91-0-slowRefresh",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 91,
+      "commandClassName": "Central Scene",
+      "endpoint": 0,
+      "property": "slowRefresh",
+      "propertyName": "slowRefresh",
+      "type": "boolean",
+      "readable": true,
+      "writeable": true,
+      "description": "When this is true, KeyHeldDown notifications are sent every 55s. When this is false, the notifications are sent every 200ms.",
+      "label": "Send held down notifications at a slow rate",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-112-0-5",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 5,
+      "propertyName": "SW1 & SW2 Switch Type",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "SW1 & SW2 Switch Type",
+      "default": 2,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 2,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Momentary switch",
+          "value": 0
+        },
+        {
+          "text": "Toggle switch (Follow switch)",
+          "value": 1
+        },
+        {
+          "text": "Toggle switch (Change on toggle)",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818201043,
+      "newValue": 0
+    },
+    {
+      "id": "3-112-0-6",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 6,
+      "propertyName": "Swap Inputs",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Swap Inputs",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Normal (SW1 - O1, SW2 - O2)",
+          "value": 0
+        },
+        {
+          "text": "Swapped (SW1 - O2, SW2 - O1)",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818201716,
+      "newValue": 0
+    },
+    {
+      "id": "3-112-0-16",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 16,
+      "propertyName": "Swap Outputs",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Swap Outputs",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Normal",
+          "value": 0
+        },
+        {
+          "text": "Swapped",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818204666,
+      "newValue": 0
+    },
+    {
+      "id": "3-112-0-36",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 36,
+      "propertyName": "O1: Power Change Report Threshold",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "O1: Power Change Report Threshold",
+      "default": 50,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 100,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 100
+        }
+      ],
+      "unit": "%",
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        }
+      ],
+      "value": 50,
+      "lastUpdate": 1777818206229,
+      "newValue": 50
+    },
+    {
+      "id": "3-112-0-39",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 39,
+      "propertyName": "O1: Minimum Time Between Power Reports",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "O1: Minimum Time Between Power Reports",
+      "default": 30,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 120,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 120
+        }
+      ],
+      "unit": "seconds",
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        }
+      ],
+      "value": 30,
+      "lastUpdate": 1777818206946,
+      "newValue": 30
+    },
+    {
+      "id": "3-112-0-71",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 71,
+      "propertyName": "Operating Modes",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Operating Modes",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 2,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Shutter",
+          "value": 0
+        },
+        {
+          "text": "Venetian blind",
+          "value": 1
+        },
+        {
+          "text": "Set Manual time",
+          "value": 2
+        }
+      ],
+      "value": 1,
+      "lastUpdate": 1777818207667,
+      "newValue": 1
+    },
+    {
+      "id": "3-112-0-72",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 72,
+      "propertyName": "Slats Turning Time",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Slats Turning Time",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 65535,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 65535
+        }
+      ],
+      "unit": "seconds",
+      "list": false,
+      "value": 125,
+      "lastUpdate": 1777818208381,
+      "newValue": 125
+    },
+    {
+      "id": "3-112-0-73",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 73,
+      "propertyName": "Slats to Previous Position",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Slats to Previous Position",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        },
+        {
+          "text": "Enable",
+          "value": 1
+        }
+      ],
+      "value": 1,
+      "lastUpdate": 1777818209090,
+      "newValue": 1
+    },
+    {
+      "id": "3-112-0-76",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 76,
+      "propertyName": "Motor Limit Detection",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Power threshold used to detect a limit switch. Increase this value if the device falsely detects limit switches.",
+      "label": "Motor Limit Detection",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 255,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 255
+        }
+      ],
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        },
+        {
+          "text": "Auto calibration",
+          "value": 1
+        }
+      ],
+      "value": 1,
+      "lastUpdate": 1777818209817,
+      "newValue": 1
+    },
+    {
+      "id": "3-112-0-77",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 77,
+      "propertyName": "Delay Next Movement",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Delay Next Movement",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 1,
+      "max": 255,
+      "allowed": [
+        {
+          "from": 1,
+          "to": 255
+        }
+      ],
+      "list": false,
+      "value": 5,
+      "lastUpdate": 1777818210548,
+      "newValue": 5
+    },
+    {
+      "id": "3-112-0-78",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 78,
+      "propertyName": "Calibrate Device",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Calibrate Device",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 1,
+      "max": 4,
+      "allowed": [
+        {
+          "from": 1,
+          "to": 4
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Start Calibration",
+          "value": 1
+        },
+        {
+          "text": "Device Calibrated (read only)",
+          "value": 2
+        },
+        {
+          "text": "Device not Calibrated (read only)",
+          "value": 3
+        },
+        {
+          "text": "Calibration error (read only)",
+          "value": 4
+        }
+      ],
+      "value": 3,
+      "lastUpdate": 1777818211282,
+      "newValue": 3
+    },
+    {
+      "id": "3-112-0-79",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 79,
+      "propertyName": "Limit Detection Delay Time",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Defines the delay before motor power is read after a relay switches ON.",
+      "label": "Limit Detection Delay Time",
+      "default": 3,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 50,
+      "allowed": [
+        {
+          "value": 0
+        },
+        {
+          "from": 3,
+          "to": 50
+        }
+      ],
+      "unit": "0.1 seconds",
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Automatic time",
+          "value": 0
+        }
+      ],
+      "value": 30,
+      "lastUpdate": 1777818212465,
+      "newValue": 30
+    },
+    {
+      "id": "3-112-0-80",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 80,
+      "propertyName": "Stop Delay Time After Limit Detected",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Stop Delay Time After Limit Detected",
+      "default": 10,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 127,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 127
+        }
+      ],
+      "unit": "seconds",
+      "list": false,
+      "value": 10,
+      "lastUpdate": 1777818213173,
+      "newValue": 10
+    },
+    {
+      "id": "3-112-0-81",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 81,
+      "propertyName": "Shutter Max Moving Time",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Defines the maximum time the motor can move before stopping.",
+      "label": "Shutter Max Moving Time",
+      "default": 120,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 1,
+      "max": 65000,
+      "allowed": [
+        {
+          "from": 1,
+          "to": 32000
+        },
+        {
+          "value": 65000
+        }
+      ],
+      "unit": "seconds",
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "unlimited time",
+          "value": 65000
+        }
+      ],
+      "value": 120,
+      "lastUpdate": 1777818213894,
+      "newValue": 120
+    },
+    {
+      "id": "3-112-0-105",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 105,
+      "propertyName": "Signal LED Intensity",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Signal LED Intensity",
+      "default": 100,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 100,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 100
+        }
+      ],
+      "unit": "%",
+      "list": false,
+      "value": 100,
+      "lastUpdate": 1777818214602,
+      "newValue": 100
+    },
+    {
+      "id": "3-112-0-117",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 117,
+      "propertyName": "Remote Reboot",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Remote Reboot",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Idle",
+          "value": 0
+        },
+        {
+          "text": "Reboot device",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818215306,
+      "newValue": 0
+    },
+    {
+      "id": "3-112-0-120",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 120,
+      "propertyName": "Factory Reset",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Reset to factory default settings and remove from the Z-Wave network.",
+      "label": "Factory Reset",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Idle",
+          "value": 0
+        },
+        {
+          "text": "Factory reset",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818216025,
+      "newValue": 0
+    },
+    {
+      "id": "3-112-0-201",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 201,
+      "propertyName": "Serial Number: Part 1",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial Number: Part 1",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 2147483647,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2147483647
+        }
+      ],
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818216757,
+      "newValue": 0
+    },
+    {
+      "id": "3-112-0-202",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 202,
+      "propertyName": "Serial Number: Part 2",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial Number: Part 2",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 2147483647,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2147483647
+        }
+      ],
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818217480,
+      "newValue": 0
+    },
+    {
+      "id": "3-112-0-203",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 203,
+      "propertyName": "Serial Number: Part 3",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial Number: Part 3",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 2147483647,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2147483647
+        }
+      ],
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818218196,
+      "newValue": 0
+    },
+    {
+      "id": "3-112-0-7",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 7,
+      "propertyName": "SW1 Detached mode",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "0 not detached, 1 detached",
+      "label": "SW1 Detached mode",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818218912,
+      "newValue": 0
+    },
+    {
+      "id": "3-112-0-8",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 8,
+      "propertyName": "SW2 Detached mode",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "0 not detached, 1 detached",
+      "label": "SW2 Detached mode",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818219636,
+      "newValue": 0
+    },
+    {
+      "id": "3-112-0-74",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 74,
+      "propertyName": "Up time",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "0 - 65535, 0.1 s units",
+      "label": "Up time",
+      "default": 6000,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 6000,
+      "lastUpdate": 1777818220354,
+      "newValue": 6000
+    },
+    {
+      "id": "3-112-0-75",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 75,
+      "propertyName": "Down time",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "0 - 65535, 0.1 s units",
+      "label": "Down time",
+      "default": 6000,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 6000,
+      "lastUpdate": 1777818221070,
+      "newValue": 6000
+    },
+    {
+      "id": "3-112-0-118",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 118,
+      "propertyName": "Enable SW for exclusion",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "1 Enabled, 0 Disabled",
+      "label": "Enable SW for exclusion",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818221794,
+      "newValue": 0
+    },
+    {
+      "id": "3-114-0-productId",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "productId",
+      "propertyName": "productId",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Product ID",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 131,
+      "lastUpdate": 1777818035232,
+      "newValue": 131
+    },
+    {
+      "id": "3-114-0-productType",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "productType",
+      "propertyName": "productType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Product type",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 3,
+      "lastUpdate": 1777818035239,
+      "newValue": 3
+    },
+    {
+      "id": "3-114-0-manufacturerId",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "manufacturerId",
+      "propertyName": "manufacturerId",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Manufacturer ID",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 1120,
+      "lastUpdate": 1777818035244,
+      "newValue": 1120
+    },
+    {
+      "id": "3-134-0-hardwareVersion",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hardwareVersion",
+      "propertyName": "hardwareVersion",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave chip hardware version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1777818038207,
+      "newValue": 1
+    },
+    {
+      "id": "3-134-0-firmwareVersions",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "firmwareVersions",
+      "propertyName": "firmwareVersions",
+      "type": "string[]",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave chip firmware versions",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": [
+        "14.2",
+        "3.0"
+      ],
+      "lastUpdate": 1777818038213,
+      "newValue": [
+        "14.2",
+        "3.0"
+      ]
+    },
+    {
+      "id": "3-134-0-protocolVersion",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "protocolVersion",
+      "propertyName": "protocolVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.23",
+      "lastUpdate": 1777818038220,
+      "newValue": "7.23"
+    },
+    {
+      "id": "3-134-0-libraryType",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "libraryType",
+      "propertyName": "libraryType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Library type",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Unknown",
+          "value": 0
+        },
+        {
+          "text": "Static Controller",
+          "value": 1
+        },
+        {
+          "text": "Controller",
+          "value": 2
+        },
+        {
+          "text": "Enhanced Slave",
+          "value": 3
+        },
+        {
+          "text": "Slave",
+          "value": 4
+        },
+        {
+          "text": "Installer",
+          "value": 5
+        },
+        {
+          "text": "Routing Slave",
+          "value": 6
+        },
+        {
+          "text": "Bridge Controller",
+          "value": 7
+        },
+        {
+          "text": "Device under Test",
+          "value": 8
+        },
+        {
+          "text": "N/A",
+          "value": 9
+        },
+        {
+          "text": "AV Remote",
+          "value": 10
+        },
+        {
+          "text": "AV Device",
+          "value": 11
+        }
+      ],
+      "value": 3,
+      "lastUpdate": 1777818038228,
+      "newValue": 3
+    },
+    {
+      "id": "3-134-0-applicationBuildNumber",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationBuildNumber",
+      "propertyName": "applicationBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Application build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 43981,
+      "lastUpdate": 1777818063118,
+      "newValue": 43981
+    },
+    {
+      "id": "3-134-0-applicationVersion",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationVersion",
+      "propertyName": "applicationVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Application version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "14.2.0",
+      "lastUpdate": 1777818063120,
+      "newValue": "14.2.0"
+    },
+    {
+      "id": "3-134-0-zWaveProtocolBuildNumber",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "zWaveProtocolBuildNumber",
+      "propertyName": "zWaveProtocolBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 562,
+      "lastUpdate": 1777818063123,
+      "newValue": 562
+    },
+    {
+      "id": "3-134-0-zWaveProtocolVersion",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "zWaveProtocolVersion",
+      "propertyName": "zWaveProtocolVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.23.4",
+      "lastUpdate": 1777818063127,
+      "newValue": "7.23.4"
+    },
+    {
+      "id": "3-134-0-hostInterfaceBuildNumber",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hostInterfaceBuildNumber",
+      "propertyName": "hostInterfaceBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial API build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818063129,
+      "newValue": 0
+    },
+    {
+      "id": "3-134-0-hostInterfaceVersion",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hostInterfaceVersion",
+      "propertyName": "hostInterfaceVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial API version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "unused",
+      "lastUpdate": 1777818063132,
+      "newValue": "unused"
+    },
+    {
+      "id": "3-134-0-applicationFrameworkBuildNumber",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationFrameworkBuildNumber",
+      "propertyName": "applicationFrameworkBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave application framework API build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 43981,
+      "lastUpdate": 1777818063135,
+      "newValue": 43981
+    },
+    {
+      "id": "3-134-0-applicationFrameworkAPIVersion",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationFrameworkAPIVersion",
+      "propertyName": "applicationFrameworkAPIVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave application framework API version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "10.23.4",
+      "lastUpdate": 1777818063139,
+      "newValue": "10.23.4"
+    },
+    {
+      "id": "3-134-0-sdkVersion",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "sdkVersion",
+      "propertyName": "sdkVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "SDK version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.23.4",
+      "lastUpdate": 1777818063143,
+      "newValue": "7.23.4"
+    },
+    {
+      "id": "3-135-0-value",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": "value",
+      "propertyName": "value",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Indicator value",
+      "ccSpecific": {
+        "indicatorId": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-135-0-identify",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": "identify",
+      "propertyName": "identify",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Identify",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Identify",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-38-1-currentValue",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 1,
+      "property": "currentValue",
+      "propertyName": "currentValue",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Current value",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 99,
+      "list": false,
+      "value": 0,
+      "isCurrentValue": true,
+      "targetValue": "38-1-targetValue",
+      "lastUpdate": 1783758585312,
+      "newValue": 0
+    },
+    {
+      "id": "3-38-1-duration",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 1,
+      "property": "duration",
+      "propertyName": "duration",
+      "type": "duration",
+      "readable": true,
+      "writeable": false,
+      "label": "Remaining duration",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "list": false,
+      "value": {
+        "value": 0,
+        "unit": "seconds"
+      },
+      "lastUpdate": 1783758585319,
+      "newValue": {
+        "value": 0,
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "3-38-1-targetValue",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 1,
+      "property": "targetValue",
+      "propertyName": "targetValue",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Target value",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 99,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783758585331,
+      "newValue": 0
+    },
+    {
+      "id": "3-38-1-Up",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 1,
+      "property": "Up",
+      "propertyName": "Up",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Perform a level change (Up)",
+      "ccSpecific": {
+        "switchType": 2
+      },
+      "stateless": false,
+      "commandClassVersion": 4,
+      "list": true,
+      "states": [
+        {
+          "text": "Start",
+          "value": true
+        },
+        {
+          "text": "Stop",
+          "value": false
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-38-1-Down",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 1,
+      "property": "Down",
+      "propertyName": "Down",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Perform a level change (Down)",
+      "ccSpecific": {
+        "switchType": 2
+      },
+      "stateless": false,
+      "commandClassVersion": 4,
+      "list": true,
+      "states": [
+        {
+          "text": "Start",
+          "value": true
+        },
+        {
+          "text": "Stop",
+          "value": false
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-38-1-restorePrevious",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 1,
+      "property": "restorePrevious",
+      "propertyName": "restorePrevious",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Restore previous value",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "list": true,
+      "states": [
+        {
+          "text": "Restore",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-50-1-value-65537",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 1,
+      "property": "value",
+      "propertyName": "value",
+      "propertyKey": 65537,
+      "propertyKeyName": "Electric_kWh_Consumed",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Electric Consumption [kWh]",
+      "ccSpecific": {
+        "meterType": 1,
+        "scale": 0,
+        "rateType": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 6,
+      "unit": "kWh",
+      "list": false,
+      "value": 0.07,
+      "lastUpdate": 1783726159809,
+      "newValue": 0.07
+    },
+    {
+      "id": "3-50-1-value-66049",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 1,
+      "property": "value",
+      "propertyName": "value",
+      "propertyKey": 66049,
+      "propertyKeyName": "Electric_W_Consumed",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Electric Consumption [W]",
+      "ccSpecific": {
+        "meterType": 1,
+        "scale": 2,
+        "rateType": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 6,
+      "unit": "W",
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783758586612,
+      "newValue": 0
+    },
+    {
+      "id": "3-50-1-reset-65537",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 1,
+      "property": "reset",
+      "propertyName": "reset",
+      "propertyKey": 65537,
+      "propertyKeyName": "UNKNOWN (0x010001)",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Reset Electric Consumption [kWh]",
+      "ccSpecific": {
+        "meterType": 1,
+        "rateType": 1,
+        "scale": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 6,
+      "list": true,
+      "states": [
+        {
+          "text": "Reset",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-50-1-reset",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 1,
+      "property": "reset",
+      "propertyName": "reset",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Reset accumulated values",
+      "stateless": false,
+      "commandClassVersion": 6,
+      "list": true,
+      "states": [
+        {
+          "text": "Reset",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-113-1-alarmType",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 1,
+      "property": "alarmType",
+      "propertyName": "alarmType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Type",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818119293,
+      "newValue": 0
+    },
+    {
+      "id": "3-113-1-alarmLevel",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 1,
+      "property": "alarmLevel",
+      "propertyName": "alarmLevel",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Level",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818119296,
+      "newValue": 0
+    },
+    {
+      "id": "3-113-1-Power Management-Over-current status",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 1,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Over-current status",
+      "propertyKeyName": "Over-current status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Over-current status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Over-current detected",
+          "value": 6
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818120187,
+      "newValue": 0
+    },
+    {
+      "id": "3-113-1-Power Management-Over-voltage status",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 1,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Over-voltage status",
+      "propertyKeyName": "Over-voltage status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Over-voltage status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Over-voltage detected",
+          "value": 7
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818120190,
+      "newValue": 0
+    },
+    {
+      "id": "3-113-1-Power Management-Over-load status",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 1,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Over-load status",
+      "propertyKeyName": "Over-load status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Over-load status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Over-load detected",
+          "value": 8
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818120193,
+      "newValue": 0
+    },
+    {
+      "id": "3-113-1-Power Management-Mains status",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 1,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Mains status",
+      "propertyKeyName": "Mains status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Mains status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "AC mains disconnected",
+          "value": 2
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-38-2-currentValue",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 2,
+      "property": "currentValue",
+      "propertyName": "currentValue",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Current value",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 99,
+      "list": false,
+      "value": 0,
+      "isCurrentValue": true,
+      "targetValue": "38-2-targetValue",
+      "lastUpdate": 1783758585956,
+      "newValue": 0
+    },
+    {
+      "id": "3-38-2-duration",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 2,
+      "property": "duration",
+      "propertyName": "duration",
+      "type": "duration",
+      "readable": true,
+      "writeable": false,
+      "label": "Remaining duration",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "list": false,
+      "value": {
+        "value": 0,
+        "unit": "seconds"
+      },
+      "lastUpdate": 1783758585963,
+      "newValue": {
+        "value": 0,
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "3-38-2-targetValue",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 2,
+      "property": "targetValue",
+      "propertyName": "targetValue",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Target value",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 99,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783758585969,
+      "newValue": 0
+    },
+    {
+      "id": "3-38-2-Up",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 2,
+      "property": "Up",
+      "propertyName": "Up",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Perform a level change (Up)",
+      "ccSpecific": {
+        "switchType": 2
+      },
+      "stateless": false,
+      "commandClassVersion": 4,
+      "list": true,
+      "states": [
+        {
+          "text": "Start",
+          "value": true
+        },
+        {
+          "text": "Stop",
+          "value": false
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-38-2-Down",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 2,
+      "property": "Down",
+      "propertyName": "Down",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Perform a level change (Down)",
+      "ccSpecific": {
+        "switchType": 2
+      },
+      "stateless": false,
+      "commandClassVersion": 4,
+      "list": true,
+      "states": [
+        {
+          "text": "Start",
+          "value": true
+        },
+        {
+          "text": "Stop",
+          "value": false
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-38-2-restorePrevious",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 2,
+      "property": "restorePrevious",
+      "propertyName": "restorePrevious",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Restore previous value",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "list": true,
+      "states": [
+        {
+          "text": "Restore",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783775004081
+    },
+    {
+      "id": "3-113-2-alarmType",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 2,
+      "property": "alarmType",
+      "propertyName": "alarmType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Type",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818150237,
+      "newValue": 0
+    },
+    {
+      "id": "3-113-2-alarmLevel",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 2,
+      "property": "alarmLevel",
+      "propertyName": "alarmLevel",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Level",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1777818150239,
+      "newValue": 0
+    },
+    {
+      "id": "3-113-2-Power Management-Over-current status",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 2,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Over-current status",
+      "propertyKeyName": "Over-current status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Over-current status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Over-current detected",
+          "value": 6
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818151110,
+      "newValue": 0
+    },
+    {
+      "id": "3-113-2-Power Management-Over-voltage status",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 2,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Over-voltage status",
+      "propertyKeyName": "Over-voltage status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Over-voltage status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Over-voltage detected",
+          "value": 7
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818151111,
+      "newValue": 0
+    },
+    {
+      "id": "3-113-2-Power Management-Over-load status",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 2,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Over-load status",
+      "propertyKeyName": "Over-load status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Over-load status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Over-load detected",
+          "value": 8
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1777818151112,
+      "newValue": 0
+    },
+    {
+      "id": "3-113-2-Power Management-Mains status",
+      "nodeId": 3,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 2,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Mains status",
+      "propertyKeyName": "Mains status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Mains status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "AC mains disconnected",
+          "value": 2
+        }
+      ],
+      "lastUpdate": 1783775004081
+    }
+  ],
+  "groups": [
+    {
+      "title": "Lifeline",
+      "endpoint": 0,
+      "value": 1,
+      "maxNodes": 9,
+      "isLifeline": true,
+      "multiChannel": true
+    },
+    {
+      "title": "Start/stop quick press [SW1]",
+      "endpoint": 0,
+      "value": 2,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Long press press [SW1]",
+      "endpoint": 0,
+      "value": 3,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Start/stop quick press [SW2]",
+      "endpoint": 0,
+      "value": 4,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Long press press [SW2]",
+      "endpoint": 0,
+      "value": 5,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Lifeline",
+      "endpoint": 1,
+      "value": 1,
+      "maxNodes": 1,
+      "isLifeline": true,
+      "multiChannel": true
+    },
+    {
+      "title": "Unnamed group 2",
+      "endpoint": 1,
+      "value": 2,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Long press press [SW1]",
+      "endpoint": 1,
+      "value": 3,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Lifeline",
+      "endpoint": 2,
+      "value": 1,
+      "maxNodes": 1,
+      "isLifeline": true,
+      "multiChannel": true
+    },
+    {
+      "title": "Unnamed group 2",
+      "endpoint": 2,
+      "value": 2,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Long press press [SW2]",
+      "endpoint": 2,
+      "value": 3,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    }
+  ],
+  "neighbors": [],
+  "ready": true,
+  "available": true,
+  "hassDevices": {},
+  "failed": false,
+  "inited": true,
+  "eventsQueue": [
+    {
+      "time": "2026-07-11T13:03:23.885Z",
+      "event": "alive",
+      "args": [
+        0
+      ]
+    },
+    {
+      "time": "2026-07-11T13:03:24.089Z",
+      "event": "ready",
+      "args": []
+    }
+  ],
+  "status": "Alive",
+  "interviewStage": "Complete",
+  "priorityReturnRoute": {},
+  "customReturnRoute": {},
+  "prioritySUCReturnRoute": false,
+  "customSUCReturnRoutes": [],
+  "availableFirmwareUpdates": [],
+  "firmwareUpdatesDismissed": {},
+  "lastFirmwareUpdateCheck": 1777818223819,
+  "appliedTemplateContentHashes": [],
+  "hexId": "0x0460 0x0003-0x0083",
+  "dbLink": "https://devices.zwave-js.io/?jumpTo=0x0460:0x0003:0x0083:14.2.0",
+  "manufacturerId": 1120,
+  "productId": 131,
+  "productType": 3,
+  "deviceConfig": {
+    "filename": "/usr/src/app/store/.config-db/devices/0x0460/qlsh-001P10.json",
+    "isEmbedded": true,
+    "manufacturer": "Shelly Europe Ltd.",
+    "manufacturerId": 1120,
+    "label": "QLSH-001P10EU",
+    "description": "Shelly Wave Shutter",
+    "devices": [
+      {
+        "productType": 3,
+        "productId": 131
+      }
+    ],
+    "firmwareVersion": {
+      "min": "0.0",
+      "max": "255.255"
+    },
+    "preferred": false,
+    "endpoints": {},
+    "paramInformation": {
+      "_map": {}
+    },
+    "metadata": {
+      "inclusion": "6.1 Adding the Device to a Z-Wave™ network (inclusion)\nNote! All Device outputs (O, O1, O2, etc. - depending on the Device type) will turn the load 1s on/1s off /1s on/1s off if the Device is successfully added to/removed from a Z-Wave™ network.\n\n6.1.1 SmartStart adding (inclusion)\nSmartStart enabled products can be added into a Z-Wave™ network by scanning the Z-Wave™ QR Code present on the Device with a gateway providing SmartStart inclusion. No further action is required, and the SmartStart device will be added automatically within 10 minutes of being switched on in the network vicinity.\n1. With the gateway application scan the QR code on the Device label and add the Security 2 (S2) Device Specific Key (DSK) to the provisioning list in the gateway.\n2. Connect the Device to a power supply.\n3. Check if the blue LED is blinking in Mode 1. If so, the Device is not added to a Z-Wave™ network.\n4. Adding will be initiated automatically within a few seconds after connecting the Device to a power supply, and the Device will be added to a Z-Wave™ network automatically.\n5. The blue LED will be blinking in Mode 2 during the adding process.\n6. The green LED will be blinking in Mode 1 if the Device is successfully added to a Z-Wave™ network.\n\n6.1.2 Adding (inclusion) with a switch/push-button\n1. Connect the Device to a power supply.\n2. Check if the blue LED is blinking in Mode 1. If so, the Device is not added to a Z-Wave™ network.\n3. Enable add/remove mode on the gateway.\n4. Toggle the switch/push-button connected to any of the SW terminals (SW, SW1, SW2, etc.) 3 times within 3 seconds (this procedure puts the Device in Learn mode*). The Device must receive on/off signal 3 times, which means pressing the momentary switch 3 times, or toggling the switch on and off 3 times.\n5. The blue LED will be blinking in Mode 2 during the adding process.\n6. The green LED will be blinking in Mode 1 if the Device is successfully added to a Z-Wave™ network.\n*Learn mode - a state that allows the Device to receive network information from the gateway.\n\n6.1.3 Adding (inclusion) with the S button\n1. Connect the Device to a power supply.\n2. Check if the blue LED is blinking in Mode 1. If so, the Device is not added to a Z-Wave™ network.\n3. Enable add/remove mode on the gateway.\n4. To enter the Setting mode, quickly press and hold the S button on the Device until the LED turns solid blue.\n5. Quickly release and then press and hold (> 2s) the S button on the Device until the blue LED starts blinking in Mode 3. Releasing the S button will start the Learn mode.\n6. The blue LED will be blinking in Mode 2 during the adding process.\n7. The green LED will be blinking in Mode 1 if the Device is successfully added to a Z-Wave™ network.\nNote! In Setting mode, the Device has a timeout of 10s before entering again into Normal mode",
+      "exclusion": "Removing the Device from a Z-Wave™ network (exclusion)\nNote! The Device will be removed from your Z-wave™ network, but any custom configuration parameters will not be erased.\nNote! All Device outputs (O, O1, O2, etc. - depending on the Device type) will turn the load 1s on/1s off /1s on/1s off if the Device is successfully added to/removed from a Z-Wave™ network.\n\n6.2.1 Removing (exclusion) with a switch/push-button\n1. Connect the Device to a power supply.\n2. Check if the green LED is blinking in Mode 1. If so, the Device is added to a Z-Wave™ network.\n3. Enable add/remove mode on the gateway.\n4. Toggle the switch/push-button connected to any of the SW terminals (SW, SW1, SW2,…) 3 times within 3 seconds (this procedure puts the Device in Learn mode). The Device must receive on/off signal 3 times, which means pressing the momentary switch 3 times, or toggling the switch on and off 3 times.\n5. The blue LED will be blinking in Mode 2 during the removing process.\n6. The blue LED will be blinking in Mode 1 if the Device is successfully removed from a Z-Wave™ network.\n\n6.2.2 Removing (exclusion) with the S button\n1. Connect the Device to a power supply.\n2. Check if the green LED is blinking in Mode 1. If so, the Device is added to a Z-Wave™ network.\n3. Enable add/remove mode on the gateway.\n4. To enter the Setting mode, quickly press and hold the S button on the Device until the LED turns solid blue.\n5. Quickly release and then press and hold (> 2s) the S button on the Device until the blue LED starts blinking in Mode 3. Releasing the S button will start the Learn mode.\n6. The blue LED will be blinking in Mode 2 during the removing process.\n7. The blue LED will be blinking in Mode 1 if the Device is successfully removed from a Z-Wave™ network.\nNote! In Setting mode, the Device has a timeout of 10s before entering again into Normal mode",
+      "reset": "6.3 Factory reset\n6.3.1 Factory reset general\nAfter Factory reset, all custom parameters and stored values (kWh, associations, routings, etc.) will return to their default state. HOME ID and NODE ID assigned to the Device will be deleted. Use this reset procedure only when the gateway is missing or otherwise inoperable.\n\n6.3.2 Factory reset with a switch/push-button\nNote! Factory reset with a switch/push-button is only possible within the first minute after the Device is connected to a power supply.\n1. Connect the Device to a power supply.\n2. Toggle the switch/push-button connected to any of the SW terminals (SW, SW1, SW2,…) 5 times within 3 seconds. The Device must receive on/off signal 5 times, which means pressing the push-button 5 times, or toggling the switch on and off 5 times.\n3. During factory reset, the LED will turn solid green for about 1s, then the blue and red LED will start blinking in Mode 3 for approx. 2s.\n4. The blue LED will be blinking in Mode 1 if the Factory reset is successful.\n\n6.3.3 Factory reset with the S button\nNote! Factory reset with the S button is possible anytime.\n1. To enter the Setting mode, quickly press and hold the S button on the Device until the LED turns solid blue.\n2. Press the S button multiple times until the LED turns solid red.\n3. Press and hold (> 2s) S button on the Device until the red LED starts blinking in Mode 3. Releasing the S button will start the factory reset.\n4. During factory reset, the LED will turn solid green for about 1s, then the blue and red LED will start blinking in Mode 3 for approx. 2s.\n5. The blue LED will be blinking in Mode 1 if the Factory reset is successful.\n\n6.3.4 Remote factory reset with parameter with the gateway\nFactory reset can be done remotely with the settings in Parameter No. 120",
+      "manual": "https://kb.shelly.cloud/knowledge-base/shelly-qubino-wave-devices"
+    }
+  },
+  "productLabel": "QLSH-001P10EU",
+  "productDescription": "Shelly Wave Shutter",
+  "manufacturer": "Shelly Europe Ltd.",
+  "firmwareVersion": "14.2.0",
+  "sdkVersion": "7.23.4",
+  "protocolVersion": 3,
+  "zwavePlusVersion": 2,
+  "zwavePlusNodeType": 0,
+  "zwavePlusRoleType": 5,
+  "nodeType": 1,
+  "endpointsCount": 2,
+  "endpoints": [
+    {
+      "index": 0,
+      "label": "Root Endpoint",
+      "deviceClass": {
+        "basic": 4,
+        "generic": 17,
+        "specific": 6
+      }
+    },
+    {
+      "index": 1,
+      "label": "Position",
+      "deviceClass": {
+        "basic": 4,
+        "generic": 17,
+        "specific": 6
+      }
+    },
+    {
+      "index": 2,
+      "label": "Tilt",
+      "deviceClass": {
+        "basic": 4,
+        "generic": 17,
+        "specific": 6
+      }
+    }
+  ],
+  "isSecure": true,
+  "security": "S2_Authenticated",
+  "supportsSecurity": false,
+  "supportsBeaming": true,
+  "isControllerNode": false,
+  "isListening": true,
+  "isFrequentListening": false,
+  "isRouting": true,
+  "keepAwake": false,
+  "maxDataRate": 100000,
+  "deviceClass": {
+    "basic": 4,
+    "generic": 17,
+    "specific": 6
+  },
+  "lastActive": 1783775003881,
+  "firmwareCapabilities": {
+    "firmwareUpgradable": true,
+    "firmwareTargets": [
+      0,
+      1
+    ]
+  },
+  "protocol": 0,
+  "deviceId": "1120-131-3",
+  "hasDeviceConfigChanged": false,
+  "statistics": {
+    "commandsTX": 1,
+    "commandsRX": 0,
+    "commandsDroppedRX": 0,
+    "commandsDroppedTX": 0,
+    "timeoutResponse": 0,
+    "lastSeen": "2026-07-11T13:03:23.881Z",
+    "rtt": 159.7,
+    "rssi": -78,
+    "lwr": {
+      "protocolDataRate": 1,
+      "repeaters": [
+        16
+      ],
+      "rssi": -78,
+      "repeaterRSSI": [
+        -69
+      ]
+    }
+  },
+  "supportsTime": false,
+  "_name": "Jalousie - Küche, rechts (Küche)",
+  "applicationRoute": false
+}
