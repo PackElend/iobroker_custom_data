@@ -24,3 +24,6 @@ Skripte sie per `readFileAsync`). Das Git-Repo ist die führende Quelle.
 - [Gruppen-Steuerung für den Devices-Adapter](docs/gruppen-steuerung.md) —
   mehrere Jalousien über eine gemeinsame GUI-Kachel steuern; drei Varianten
   (Szenen-Taster, virtuelle Gruppe, Alias mit JS-Fan-out), pro Gruppe wählbar.
+- [Gruppen-Beispiele](docs/gruppen-beispiele.md) — je Variante eine
+  Jalousien-Gruppe (Auf/Zu + Positions-Slider) und eine Licht-Gruppe
+  (An/Aus + Helligkeits-Slider) mit Erklärung des Ergebnisses.
