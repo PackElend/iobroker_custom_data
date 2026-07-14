@@ -263,6 +263,192 @@ die Ziel-Helligkeit, der Trigger verteilt alles an die Mitglieder.
 Angezeigt wird auch hier der letzte Sollwert, nicht der echte Zustand
 der einzelnen Lampen; und das Skript muss dauerhaft laufen.
 
+## Weitere Beispiele: dieselben Geräte durch alle drei Varianten
+
+Die Beispiele oben zeigen jede Variante an einem eigenen Raum/Mitglieder-Satz.
+Der folgende Satz kommt aus der Gegenrichtung: **immer dieselben zwei
+Geräte**, einmal komplett durch A/B/C. Das macht sichtbar, dass sich die
+Varianten auf denselben Mitgliedern nicht ausschließen — ein Auf/Zu- bzw.
+An/Aus-Taster (A) und ein Slider (B oder C) dürfen parallel auf dieselben
+Geräte zeigen, solange sie unterschiedliche `gruppe`-Namen tragen.
+
+Die Jalousien-Mitglieder (`JalousieSchlafzimmer`, `JalousieArbeitszimmer`)
+sind real aus `mapping.json`; die Licht-Mitglieder
+(`DeckenlampeWohnzimmer`, `StehlampeWohnzimmer`) sind wie oben Platzhalter,
+bis eine Licht-Vorlage in `vorlagen.json` und passende `mapping.json`-Einträge
+existieren.
+
+### Jalousie (Raum „Obergeschoss")
+
+**Variante A — Auf/Zu-Taster** (`wertZu: 100` = Position „ganz zu",
+`wertAuf: 0` = Position „ganz auf"):
+
+```json
+{
+  "gruppe": "Jalousien_og_taster",
+  "name": "Jalousien OG",
+  "variante": "A",
+  "profil": "jalousie",
+  "raum": "Obergeschoss",
+  "funktion": "Jalousie",
+  "wertZu": 100,
+  "wertAuf": 0,
+  "formel": null,
+  "mitglieder": [
+    "alias.0.scripted aliases.JalousieSchlafzimmer.SET",
+    "alias.0.scripted aliases.JalousieArbeitszimmer.SET"
+  ]
+}
+```
+
+**Ergebnis:** zwei Szenen-Objekte `scene.0.Jalousien_og_taster_zu` und
+`…_auf`. Die Devices-GUI zeigt zwei Button-Kacheln „Jalousien OG zu"
+und „Jalousien OG auf"; ein Druck auf „zu" schreibt 100 auf alle
+Mitglieder, „auf" schreibt 0. Kein Slider, keine Zwischenpositionen.
+
+**Variante B — Positions-Slider** (virtuelle Gruppe):
+
+```json
+{
+  "gruppe": "Jalousien_og_position",
+  "name": "Jalousien OG Position",
+  "variante": "B",
+  "profil": "jalousie",
+  "raum": "Obergeschoss",
+  "funktion": "Jalousie",
+  "wertZu": null,
+  "wertAuf": null,
+  "formel": null,
+  "mitglieder": [
+    "alias.0.scripted aliases.JalousieSchlafzimmer.SET",
+    "alias.0.scripted aliases.JalousieArbeitszimmer.SET"
+  ]
+}
+```
+
+**Ergebnis:** ein Szenen-Objekt `scene.0.Jalousien_og_position` mit
+Rolle `level.blind` und `virtualGroup`. Die GUI zeigt eine
+Jalousie-Kachel mit Slider 0–100 %; der eingestellte Wert wird vom
+Szenen-Adapter 1:1 auf alle Mitglieder kopiert. Fährt jemand ein
+Mitglied einzeln, wird die Gruppe *uncertain*.
+
+**Variante C — vollwertiges Jalousie-Gerät:**
+
+```json
+{
+  "gruppe": "Jalousien_og",
+  "name": "Jalousien OG",
+  "variante": "C",
+  "profil": "jalousie",
+  "raum": "Obergeschoss",
+  "funktion": "Jalousie",
+  "wertZu": null,
+  "wertAuf": null,
+  "formel": null,
+  "mitglieder": [
+    "alias.0.scripted aliases.JalousieSchlafzimmer.SET",
+    "alias.0.scripted aliases.JalousieArbeitszimmer.SET"
+  ]
+}
+```
+
+**Ergebnis:** ein Halter-State `0_userdata.0.Gruppen.Jalousien_og_soll`
+und ein Alias-Kanal `alias.0.Gruppen.Jalousien_og` (Kanal-Rolle
+`blind`) mit State `LEVEL` (Rolle `level.blind`, 0–100 %). Die GUI —
+und auch Matter/Alexa — sieht eine ganz normale Jalousie mit
+Positions-Slider; der Fan-out-Trigger verteilt jeden Sollwert auf die
+Mitglieder. Das Skript muss dafür dauerhaft laufen.
+
+### Licht/Dimmer (Raum „Wohnzimmer")
+
+Die Mitglieder sind hier Dimmer-Aliase mit einem number-`SET`
+(0–100 %). Für reine Schalt-Aktoren ohne Dimmen gilt dasselbe Muster
+mit `"profil": "schalter"` und `true`/`false` statt 100/0.
+
+**Variante A — An/Aus-Taster** (`wertAuf: 100` = an,
+`wertZu: 0` = aus):
+
+```json
+{
+  "gruppe": "Licht_wz_taster",
+  "name": "Licht Wohnzimmer",
+  "variante": "A",
+  "profil": "dimmer",
+  "raum": "Wohnzimmer",
+  "funktion": "Licht",
+  "wertZu": 0,
+  "wertAuf": 100,
+  "formel": null,
+  "mitglieder": [
+    "alias.0.scripted aliases.DeckenlampeWohnzimmer.SET",
+    "alias.0.scripted aliases.StehlampeWohnzimmer.SET"
+  ]
+}
+```
+
+**Ergebnis:** zwei Button-Kacheln. Achtung Benennung: die Taster
+heißen technisch immer `…_zu`/`…_auf` — beim Licht bedeutet „auf"
+also *an* (schreibt 100) und „zu" *aus* (schreibt 0). Kein Slider.
+
+**Variante B — Helligkeits-Slider** (virtuelle Gruppe):
+
+```json
+{
+  "gruppe": "Licht_wz_helligkeit",
+  "name": "Licht Wohnzimmer Helligkeit",
+  "variante": "B",
+  "profil": "dimmer",
+  "raum": "Wohnzimmer",
+  "funktion": "Licht",
+  "wertZu": null,
+  "wertAuf": null,
+  "formel": null,
+  "mitglieder": [
+    "alias.0.scripted aliases.DeckenlampeWohnzimmer.SET",
+    "alias.0.scripted aliases.StehlampeWohnzimmer.SET"
+  ]
+}
+```
+
+**Ergebnis:** ein Szenen-Objekt `scene.0.Licht_wz_helligkeit`
+mit Rolle `level.dimmer`. Die GUI zeigt eine Dimmer-Kachel mit
+Helligkeits-Slider 0–100 %; der Wert geht 1:1 an beide Lampen.
+Gleiche *uncertain*-Mechanik wie bei der Jalousie.
+
+**Variante C — vollwertiges Dimmer-Gerät:**
+
+```json
+{
+  "gruppe": "Licht_wz",
+  "name": "Licht Wohnzimmer",
+  "variante": "C",
+  "profil": "dimmer",
+  "raum": "Wohnzimmer",
+  "funktion": "Licht",
+  "wertZu": null,
+  "wertAuf": null,
+  "formel": null,
+  "mitglieder": [
+    "alias.0.scripted aliases.DeckenlampeWohnzimmer.SET",
+    "alias.0.scripted aliases.StehlampeWohnzimmer.SET"
+  ]
+}
+```
+
+**Ergebnis:** Halter `0_userdata.0.Gruppen.Licht_wz_soll` und
+Alias-Kanal `alias.0.Gruppen.Licht_wz` (Kanal-Rolle `light`)
+mit State `LEVEL` (Rolle `level.dimmer`, 0–100 %). Die GUI erkennt
+einen echten Dimmer mit Helligkeits-Slider — die meisten
+Visualisierungen rendern dazu automatisch auch einen An/Aus-Schalter
+(an = letzter Wert bzw. 100, aus = 0). Wie bei der Jalousie verteilt
+der Trigger die Werte, das Skript muss laufen.
+
+**Layern statt entscheiden:** `Jalousien_og_taster` (A) und
+`Jalousien_og` (C) zeigen auf dieselben zwei Jalousien — die GUI hat dann
+sowohl die zwei Auf/Zu-Kacheln als auch die Geräte-Kachel mit Slider.
+Genauso lässt sich `Licht_wz_taster` (A) mit
+`Licht_wz_helligkeit` (B) kombinieren.
+
 ## Wann welche Variante?
 
 - **Nur An/Aus bzw. Auf/Zu** reicht → **A**: minimalste Objekte, kein
