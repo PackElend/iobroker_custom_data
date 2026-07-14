@@ -1,0 +1,5 @@
+[
+  { "profil": "jalousie", "typ": "number",  "rolle": "level.blind",  "stateName": "LEVEL", "channelRole": "blind",  "unit": "%",  "min": 0,    "max": 100,  "def": null },
+  { "profil": "schalter", "typ": "boolean", "rolle": "switch",       "stateName": "SET",   "channelRole": "socket", "unit": null, "min": null, "max": null, "def": null },
+  { "profil": "dimmer",   "typ": "number",  "rolle": "level.dimmer", "stateName": "LEVEL", "channelRole": "light",  "unit": "%",  "min": 0,    "max": 100,  "def": null }
+]
