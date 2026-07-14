@@ -89,6 +89,11 @@ Für Variante A/B muss der `iobroker.scenes`-Adapter installiert sein
 
 ## Die drei Varianten
 
+Durchgespielte Beispiele — je Variante eine Jalousien-Gruppe (Auf/Zu +
+Positions-Slider) und eine Licht-Gruppe (An/Aus + Helligkeits-Slider)
+mit Ergebnis-Erklärung — stehen in
+[gruppen-beispiele.md](gruppen-beispiele.md).
+
 ### Variante A — Szene als Taster
 
 Zwei `scene.0.*`-Boolean-Objekte (`<gruppe>_zu`, `<gruppe>_auf`) mit
