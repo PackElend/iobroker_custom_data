@@ -1,11 +1,17 @@
 // ============================================================================
 // GRUPPEN-AUFBAU  (ein Skript unter "common", Typ "Javascript")
 //
-// Liest die Gruppen-Konfiguration aus einer flachen JSON-Tabelle im
+// Liest die Gruppen-Konfiguration aus zwei flachen JSON-Tabellen im
 // Dateispeicher:
 //   0_userdata.0 : configuration.read.by.scripts/gruppen.json
+//   0_userdata.0 : configuration.read.by.scripts/gruppen-vorlagen.json
 //
-// Baut daraus pro Gruppe eine von drei Varianten:
+// gruppen.json definiert die Gruppen, gruppen-vorlagen.json die Profile
+// (Geraeteklassen: typ/rolle/stateName/channelRole/unit/min/max/def). Das
+// Skript selbst enthaelt keine Geraeteklassen-Annahmen — welche Rollen und
+// Typen eine Gruppe bekommt, steht ausschliesslich im Profil.
+//
+// Baut pro Gruppe eine von drei Varianten:
 //   A = zwei Szenen als "Taster" (scene.0.<gruppe>_auf / _zu, feste Werte)
 //   B = eine virtuelle Gruppe    (scene.0.<gruppe>, virtualGroup, stufenlos)
 //   C = Alias mit JS-Fan-out     (alias.0.Gruppen.<gruppe> + 0_userdata-Halter)
@@ -29,6 +35,7 @@
 
 const FILE_ADAPTER = '0_userdata.0';
 const FILE_GRUPPEN = 'configuration.read.by.scripts/gruppen.json';
+const FILE_PROFILE = 'configuration.read.by.scripts/gruppen-vorlagen.json';
 
 main();
 
@@ -39,6 +46,28 @@ async function main() {
     } catch (err) {
         log(`Konnte JSON-Konfig nicht lesen/parsen (liegt gruppen.json unter ${FILE_ADAPTER}/configuration.read.by.scripts/?): ${err}`, 'error');
         return;
+    }
+
+    let profilListe;
+    try {
+        profilListe = JSON.parse((await readFileAsync(FILE_ADAPTER, FILE_PROFILE)).toString());
+    } catch (err) {
+        log(`Konnte JSON-Konfig nicht lesen/parsen (liegt gruppen-vorlagen.json unter ${FILE_ADAPTER}/configuration.read.by.scripts/?): ${err}`, 'error');
+        return;
+    }
+
+    // Profile in eine Map umsetzen; kaputte Eintraege nur ueberspringen
+    const profile = {};
+    for (const p of profilListe) {
+        if (!p.profil || !p.typ || !p.rolle || !p.stateName || !p.channelRole) {
+            log(`Profil-Eintrag ohne "profil"/"typ"/"rolle"/"stateName"/"channelRole": ${JSON.stringify(p)}. Uebersprungen.`, 'error');
+            continue;
+        }
+        if (profile[p.profil]) {
+            log(`Profil "${p.profil}" ist doppelt in gruppen-vorlagen.json. Zweiter Eintrag uebersprungen.`, 'error');
+            continue;
+        }
+        profile[p.profil] = p;
     }
 
     // Szenen-Adapter pruefen: fuer Variante A/B noetig. Nur warnen, nicht installieren.
@@ -63,10 +92,31 @@ async function main() {
         }
         benutzteNamen.add(g.gruppe);
 
+        const profil = g.profil ? profile[g.profil] : null;
+        if (!profil) {
+            log(`Gruppe "${g.gruppe}": Profil "${g.profil}" ist nicht in gruppen-vorlagen.json definiert ("profil" ist Pflicht). Uebersprungen.`, 'error');
+            continue;
+        }
+
         // Enum-Zuweisung ist Pflicht, sonst taucht die Gruppe nie in der Auto-GUI auf
         if (!g.raum || !g.funktion) {
             log(`Gruppe "${g.gruppe}": "raum" und "funktion" sind Pflicht (Devices-Adapter braucht die Enums). Uebersprungen.`, 'error');
             continue;
+        }
+
+        // Formel: nur Variante C, einmal beim Aufbau kompilieren
+        let formelFn = null;
+        if (g.formel) {
+            if (g.variante !== 'C') {
+                log(`Gruppe "${g.gruppe}": "formel" wird nur bei Variante C unterstuetzt und wird ignoriert.`, 'error');
+            } else {
+                try {
+                    formelFn = new Function('val', 'return (' + g.formel + ')');
+                } catch (err) {
+                    log(`Gruppe "${g.gruppe}": Syntaxfehler in "formel" (${g.formel}): ${err}. Uebersprungen.`, 'error');
+                    continue;
+                }
+            }
         }
 
         const mitglieder = await pruefeMitglieder(g);
@@ -75,9 +125,9 @@ async function main() {
             continue;
         }
 
-        if (g.variante === 'A') await baueVarianteA(g, mitglieder);
-        if (g.variante === 'B') await baueVarianteB(g, mitglieder);
-        if (g.variante === 'C') await baueVarianteC(g, mitglieder);
+        if (g.variante === 'A') await baueVarianteA(g, profil, mitglieder);
+        if (g.variante === 'B') await baueVarianteB(g, profil, mitglieder);
+        if (g.variante === 'C') await baueVarianteC(g, profil, mitglieder, formelFn);
     }
 
     log('gruppen-aufbau fertig.', 'info');
@@ -99,12 +149,16 @@ async function aufraeumen() {
         }
     }
 
-    // Eigene Alias-Kanaele (Variante C), rekursiv inkl. LEVEL-State
+    // Eigene Alias-Kanaele (Variante C), rekursiv. Der State-Name im Kanal
+    // haengt vom Profil ab, deshalb vor dem Loeschen alle Kind-States
+    // einsammeln (fuer die Enum-Bereinigung) statt einen Suffix zu raten.
     for (const id of sammleIds("channel[id=alias.0.Gruppen.*]")) {
         if (await hatMarker(id)) {
+            for (const kindId of sammleIds(`state[id=${id}.*]`)) {
+                geloescht.add(kindId);
+            }
             await deleteObjectAsync(id, true);
             geloescht.add(id);
-            geloescht.add(`${id}.LEVEL`);
             log(`Alter Gruppen-Alias entfernt: ${id}`, 'info');
         }
     }
@@ -164,13 +218,26 @@ async function pruefeMitglieder(g) {
     return vorhanden;
 }
 
+// common-Felder aus dem Profil: typ/rolle immer, unit/min/max/def nur wenn
+// im Profil gesetzt (null = weglassen)
+function commonAusProfil(profil) {
+    const c = { type: profil.typ, role: profil.rolle };
+    for (const feld of ['unit', 'min', 'max', 'def']) {
+        if (profil[feld] !== null && profil[feld] !== undefined) c[feld] = profil[feld];
+    }
+    return c;
+}
+
 // ---------------------------------------------------------------------------
 // Variante A: zwei Szenen als Taster (feste Werte fuer "zu" und "auf")
 // ---------------------------------------------------------------------------
-async function baueVarianteA(g, mitglieder) {
+async function baueVarianteA(g, profil, mitglieder) {
     if (g.wertZu === null || g.wertZu === undefined || g.wertAuf === null || g.wertAuf === undefined) {
         log(`Gruppe "${g.gruppe}" (Variante A): "wertZu" und "wertAuf" sind Pflicht. Uebersprungen.`, 'error');
         return;
+    }
+    if (typeof g.wertZu !== profil.typ || typeof g.wertAuf !== profil.typ) {
+        log(`Gruppe "${g.gruppe}" (Variante A): "wertZu"/"wertAuf" (${JSON.stringify(g.wertZu)}/${JSON.stringify(g.wertAuf)}) passen nicht zum Typ "${profil.typ}" des Profils "${g.profil}".`, 'warn');
     }
 
     const taster = [
@@ -219,14 +286,16 @@ async function baueVarianteA(g, mitglieder) {
 // ---------------------------------------------------------------------------
 // Variante B: eine virtuelle Gruppe (Wert wird 1:1 auf alle Mitglieder kopiert)
 // ---------------------------------------------------------------------------
-async function baueVarianteB(g, mitglieder) {
+async function baueVarianteB(g, profil, mitglieder) {
     const id = `scene.0.${g.gruppe}`;
     await setObjectAsync(id, {
         type: 'state',
         common: {
             name: g.name || g.gruppe,
+            // virtualGroup kopiert Werte 1:1, deshalb bleibt der Typ "mixed";
+            // nur die Rolle kommt aus dem Profil (fuer die GUI-Erkennung)
             type: 'mixed',
-            role: 'level.blind',
+            role: profil.rolle,
             enabled: true,
             read: true,
             write: true,
@@ -256,11 +325,13 @@ async function baueVarianteB(g, mitglieder) {
 }
 
 // ---------------------------------------------------------------------------
-// Variante C: 0_userdata-Halter + Alias mit level.blind + JS-Fan-out-Trigger
+// Variante C: 0_userdata-Halter + Alias-Kanal (Rollen aus dem Profil)
+//             + JS-Fan-out-Trigger (optional mit Formel)
 // ---------------------------------------------------------------------------
-async function baueVarianteC(g, mitglieder) {
+async function baueVarianteC(g, profil, mitglieder, formelFn) {
     const sollId = `0_userdata.0.Gruppen.${g.gruppe}_soll`;
     const aliasId = `alias.0.Gruppen.${g.gruppe}`;
+    const aliasStateId = `${aliasId}.${profil.stateName}`;
 
     // Ordner sicherstellen (ohne Marker, werden beim Aufraeumen nie geloescht)
     await ordnerSicherstellen('0_userdata.0.Gruppen');
@@ -269,55 +340,56 @@ async function baueVarianteC(g, mitglieder) {
     // Halter-State: traegt den Gruppen-Sollwert
     await setObjectAsync(sollId, {
         type: 'state',
-        common: {
+        common: Object.assign(commonAusProfil(profil), {
             name: `${g.name || g.gruppe} Sollwert`,
-            type: 'number',
-            role: 'level.blind',
-            unit: '%',
-            min: 0,
-            max: 100,
             read: true,
             write: true,
-        },
+        }),
         native: { gruppenAufbau: true },
     });
 
-    // Alias-Kanal: erscheint im Devices-Adapter als "echte" Jalousie
+    // Alias-Kanal: erscheint im Devices-Adapter als "echtes" Geraet der
+    // Profil-Klasse (Kanal-Rolle und State-Rolle aus gruppen-vorlagen.json)
     await setObjectAsync(aliasId, {
         type: 'channel',
-        common: { name: g.name || g.gruppe, role: 'blind' },
+        common: { name: g.name || g.gruppe, role: profil.channelRole },
         native: { gruppenAufbau: true },
     });
-    await setObjectAsync(`${aliasId}.LEVEL`, {
+    await setObjectAsync(aliasStateId, {
         type: 'state',
-        common: {
-            name: 'LEVEL',
-            type: 'number',
-            role: 'level.blind',
-            unit: '%',
-            min: 0,
-            max: 100,
+        common: Object.assign(commonAusProfil(profil), {
+            name: profil.stateName,
             read: true,
             write: true,
             alias: { id: { read: sollId, write: sollId } },
-        },
+        }),
         native: { gruppenAufbau: true },
     });
 
     // Fan-out: jede Schreib-Aktion (ack=false) auf den Halter geht an alle
-    // Mitglieder. Danach wird der Halter mit ack=true bestaetigt, damit die
-    // GUI den Wert als uebernommen anzeigt (und der Trigger nicht erneut zieht).
+    // Mitglieder — mit Formel transformiert, falls eine definiert ist. Danach
+    // wird der Halter mit dem ORIGINAL-Wert ack=true bestaetigt, damit die
+    // GUI den Nutzer-Sollwert anzeigt (und der Trigger nicht erneut zieht).
     on({ id: sollId, change: 'any', ack: false }, async (obj) => {
-        const wert = obj.state.val;
+        const original = obj.state.val;
+        let wert = original;
+        if (formelFn) {
+            try {
+                wert = formelFn(original);
+            } catch (err) {
+                log(`Gruppe "${g.gruppe}": Laufzeitfehler in "formel" fuer val=${JSON.stringify(original)}: ${err}. Wert wird nicht verteilt.`, 'error');
+                return;
+            }
+        }
         for (const m of mitglieder) {
             await setStateAsync(m, wert, false);
         }
-        await setStateAsync(sollId, wert, true);
+        await setStateAsync(sollId, original, true);
     });
 
     await enumZuweisen('rooms', g.raum, aliasId, g.gruppe);
     await enumZuweisen('functions', g.funktion, aliasId, g.gruppe);
-    log(`Gruppe "${g.gruppe}" (Variante C) angelegt: ${aliasId} -> ${sollId} -> ${mitglieder.length} Mitglieder.`, 'info');
+    log(`Gruppe "${g.gruppe}" (Variante C, Profil "${g.profil}") angelegt: ${aliasId} -> ${sollId} -> ${mitglieder.length} Mitglieder.`, 'info');
 }
 
 async function ordnerSicherstellen(id) {
