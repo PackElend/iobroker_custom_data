@@ -44,9 +44,13 @@ Ablage im Dateispeicher unter
 | `channelRole` | Rolle des Alias-Kanals bei Variante C (z.B. `"blind"`, `"socket"`, `"light"`) |
 | `unit`, `min`, `max`, `def` | Optionale `common`-Felder; `null` = Feld wird weggelassen |
 
-Mitgeliefert sind drei Profile: `jalousie` (number/`level.blind`/`LEVEL`,
+Mitgeliefert sind fünf Profile: `jalousie` (number/`level.blind`/`LEVEL`,
 identisch zum früheren fest verdrahteten Verhalten), `schalter`
-(boolean/`switch`/`SET`) und `dimmer` (number/`level.dimmer`/`LEVEL`).
+(boolean/`switch`/`SET`), `dimmer` (number/`level.dimmer`/`LEVEL`) sowie
+`jalousieTasteZu`/`jalousieTasteAuf` (boolean/`button.close.blind`
+bzw. `button.open.blind`/`CLOSE`/`OPEN`) für Jalousien, die statt eines
+Positions-`SET` nur ein Start/Stop-Tastenpaar pro Richtung anbieten
+(siehe Beispiel „Start/Stop-Taster ohne Zielposition" unten).
 
 ## gruppen.json
 
@@ -343,6 +347,89 @@ der Trigger die Werte, das Skript muss laufen.
 Geräte schließen sich nicht aus — einfach zwei Gruppen mit
 unterschiedlichem `gruppe`-Namen auf dieselben Mitglieder zeigen
 lassen, wie oben `Jalousien_og_taster` + `Jalousien_og`.
+
+### Beispiel: Start/Stop-Taster ohne Zielposition
+
+Manche Antriebe (z.B. Z-Wave „Level Change"/„Up"-„Down"-Eigenschaften
+mit `switchType: 2`) kennen keine Positions-`SET` (0–100 %), sondern
+nur ein boolean Start/Stop-Signal pro Richtung — Beispiel aus einem
+Z-Wave-JS-UI-Export:
+
+```json
+{
+  "property": "Down",
+  "metadata": {
+    "type": "boolean",
+    "writeable": true,
+    "states": { "true": "Start", "false": "Stop" }
+  }
+}
+```
+
+Für solche Geräte ist Variante A ungeeignet: Ihre beiden Taster
+(`_zu`/`_auf`) schreiben feste Werte auf **dieselbe** Mitgliederliste —
+hier braucht aber jede Richtung eine eigene Liste (die `Down`- bzw.
+`Up`-Eigenschaft sind unterschiedliche Datenpunkte, keine
+unterschiedlichen Werte auf demselben Datenpunkt). Richtig ist eine
+eigene virtuelle Gruppe (Variante B) pro Richtung: Schreiben von `true`
+startet die Fahrt, `false` stoppt sie.
+
+Voraussetzung: Das Gerät muss bereits über `alias-aufbau.js` mit der
+Vorlage `jalousie` aufgebaut sein — deren `CLOSE`-/`OPEN`-Felder bilden
+genau solche Start/Stop-Eigenschaften ab (`quelle`:
+`Multilevel_Switch.Down_1` bzw. `Up_1` in `vorlagen.json`). Die
+`mitglieder` zeigen dann auf die bereits vorhandenen Alias-States
+`alias.0.scripted aliases.<Gerät>.CLOSE` / `.OPEN`, nicht auf die
+rohen Z-Wave-Eigenschaften.
+
+```json
+{
+  "gruppe": "Rollladen_taster_ab",
+  "name": "Rollladen Ab",
+  "variante": "B",
+  "profil": "jalousieTasteZu",
+  "raum": "Zentrale",
+  "funktion": "Jalousie",
+  "wertZu": null,
+  "wertAuf": null,
+  "formel": null,
+  "mitglieder": [
+    "alias.0.scripted aliases.JalousieOhnePosition.CLOSE"
+  ]
+}
+```
+
+```json
+{
+  "gruppe": "Rollladen_taster_auf",
+  "name": "Rollladen Auf",
+  "variante": "B",
+  "profil": "jalousieTasteAuf",
+  "raum": "Zentrale",
+  "funktion": "Jalousie",
+  "wertZu": null,
+  "wertAuf": null,
+  "formel": null,
+  "mitglieder": [
+    "alias.0.scripted aliases.JalousieOhnePosition.OPEN"
+  ]
+}
+```
+
+**Ergebnis:** zwei Szenen-Objekte `scene.0.Rollladen_taster_ab` (Rolle
+`button.close.blind`) und `scene.0.Rollladen_taster_auf` (Rolle
+`button.open.blind`), je ein boolean Toggle in der GUI. `true` auf die
+„Ab"-Gruppe startet bei allen Mitgliedern die Abwärtsfahrt, `false`
+stoppt sie; „Auf" entsprechend für die Aufwärtsfahrt. Es gibt keinen
+gemeinsamen Positionswert — anders als bei Variante C mit `LEVEL` zeigt
+hier keine Kachel eine Prozentzahl, nur den Start/Stop-Zustand.
+
+**Wenn ein Gerät sowohl Positions-`SET` als auch Start/Stop-Tasten
+hat** (viele Antriebe bieten beides parallel an), lassen sich beide
+Ansätze kombinieren: eine Variante-C-Gruppe mit Profil `jalousie` für
+den Slider und zusätzlich die beiden Variante-B-Gruppen oben für
+Direktzugriff auf die Tasten — auch das sind wieder nur mehrere
+`gruppe`-Einträge auf denselben (oder überlappenden) Gerätekreis.
 
 ## Was zeigt die Devices-Auto-GUI?
 
